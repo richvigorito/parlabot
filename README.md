@@ -10,7 +10,7 @@ ParlaBot is a voice-enabled app that provides real-time feedback on your Italian
 ### My History with Voice Recognition  
 My journey into speech recognition began back in 2007 with my Master's project in Computer Science. I developed a system that could recognize vowels using inverse FFT and Mel filter banks. At the time, deep learning wasn’t viable for personal projects — compute was expensive, data was scarce, and state-of-the-art models were limited to research labs. Even getting reliable vowel separation felt like a breakthrough.
 
-The core toolkit I used was **CMU Sphinx**, a modular, C-based open-source speech recognition engine. It was one of the only freely available resources for voice recognition research at the time and helped shape the architecture of my early vowel-matching project.
+The core toolkit I used was **CMU Sphinx**, a modular, C-based open-source speech recognition engine. It was one of the only freely available resources for voice recognition research at the time and helped shape the architecture of my Java-based vowel-matching project.
 
 ### Fast-Forward to Now  
 Nearly two decades later, I’ve been studying Italian seriously for three years and wanted to build something that merges:
