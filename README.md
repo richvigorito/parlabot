@@ -1,5 +1,5 @@
 # ☕ ParlaBot: potrebbe ripeterlo?  
-<em> (Potrebbe ripeterlo? -> Could you repeat that?) </em>
+<em> (SpeakBot: Could you repeat that?) </em>
 
 ParlaBot is a voice-enabled app that provides real-time feedback on your Italian pronunciation. Speak into your mic, and ParlaBot will transcribe what you said, compare it to a target phrase, and give constructive feedback — all powered by modern open-source AI.
 
@@ -9,7 +9,6 @@ ParlaBot is a voice-enabled app that provides real-time feedback on your Italian
 ### A Nod to the Past
 My first real speech recognition project was my 2007 Master’s thesis — a vowel recognition frontend built with [FFTs](https://en.wikipedia.org/wiki/Fast_Fourier_transform), [Mel filters](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum), and [CMU Sphinx](https://en.wikipedia.org/wiki/CMU_Sphinx). It’s old-school compared to today’s AI toolkits, but this research (not necessarily mine, but those I studied) laid the foundation for the models that power ParlaBot.
 [More on that here →](docs/ms.md)
-
 
 ### Fast-Forward to Now  
 Nearly two decades later, I’ve been studying Italian seriously for three years and wanted to build something that merges:
