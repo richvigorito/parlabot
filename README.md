@@ -55,6 +55,34 @@ ParlaBot is composed of several Dockerized microservices:
 
 All services are containerized and connected via `docker-compose`.
 
+```
+                    [User or Web Interface]
+                              |
+                              v
+                +------------------------------+
+                |        Frontend API          |  (Python, FastAPI)
+                |  Receives audio, returns     |
+                |  feedback + transcriptions   |
+                +------------------------------+
+                       |         |        |
+                       v         v        v
+            +-------------+  +------------+  +------------------+
+            |   STT Svc   |  | Feedback   |  | Phrase Generator |
+            | (Python +   |  | (Go or C++)|  | (Go)             |
+            |  Wav2Vec2)  |  | Compares   |  | Serves phrases   |
+            +-------------+  | speech vs  |  | & tracks progress|
+                             | target     |  +------------------+
+                             +------------+
+                                     |
+                                     v
+                           +-------------------+
+                           | Audio Preprocess  | (C or C++)
+                           | Optional cleanup  |
+                           | for raw mic input |
+                           +-------------------+
+```
+
+
 ---
 
 ## Tech Stack

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend-api:
+    build: ./frontend-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - stt-service
+      - feedback-service
+      - phrase-service
+
+  stt-service:
+    build: ./stt-service
+    expose:
+      - "5001"
+
+  feedback-service:
+    build: ./feedback-service
+    expose:
+      - "5002"
+
+  phrase-service:
+    build: ./phrase-service
+    expose:
+      - "5003"
