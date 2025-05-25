@@ -1,4 +1,6 @@
 fastapi
-uvicorn
-requests
+uvicorn[standard]
 python-multipart
+transformers
+torchaudio
+torch

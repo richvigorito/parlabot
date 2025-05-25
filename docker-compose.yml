@@ -1,26 +1,57 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  frontend-api:
-    build: ./frontend-api
+  orchestrator:
+    build:
+      context: ./src/orchestrator
     ports:
       - "8000:8000"
     depends_on:
       - stt-service
-      - feedback-service
-      - phrase-service
+    volumes:
+      - stt-shared:/app/shared
 
   stt-service:
-    build: ./stt-service
-    expose:
-      - "5001"
+    build:
+      context: ./src/stt-service
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    volumes:
+      - stt-shared:/app/shared
+      - ./src/stt-service:/app
+    command: uvicorn stt:app --host 0.0.0.0 --port 5001 --reload
 
-  feedback-service:
-    build: ./feedback-service
-    expose:
-      - "5002"
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
 
   phrase-service:
-    build: ./phrase-service
-    expose:
-      - "5003"
+    build:
+      context: ./src/phrase-service
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5002"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017 
+    volumes:
+      - ./src/phrase-service:/app
+    command: uvicorn app:app --host 0.0.0.0 --port 5002 --reload
+
+  frontend-ui:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./src/frontend-ui:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm start"
+
+volumes:
+  stt-shared:
+  mongo-data:

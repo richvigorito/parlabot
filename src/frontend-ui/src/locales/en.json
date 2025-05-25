@@ -1,0 +1,11 @@
+{
+  "title": "ParlaBot: Speak Italian ☕",
+  "startRecording": "Speak to me",
+  "stopRecording": "Stop and Analyze",
+  "processing": "Processing...",
+  "expected": "Expected",
+  "youSaid": "You said",
+  "feedback": "Feedback",
+  "getPhrase": "Get Phrase",
+  "trySaying": "Try Saying"
+}

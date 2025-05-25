@@ -1,0 +1,12 @@
+{
+  "title": "ParlaBot: Parla Italiano ☕",
+  "startRecording": "Parlarmi",
+  "stopRecording": "Ferma e Analizza",
+  "processing": "Elaborazione...",
+  "expected": "Aspettato",
+  "youSaid": "Hai detto",
+  "feedback": "Feedback",
+  "getPhrase": "Ottieni una frase",
+  "trySaying": "Provi a dire"
+}
+

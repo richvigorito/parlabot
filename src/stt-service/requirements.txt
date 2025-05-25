@@ -2,4 +2,8 @@ fastapi
 uvicorn
 transformers
 torch
+torchaudio
 soundfile
+python-multipart
+huggingface_hub[hf_xet]
+asgi-correlation-id
