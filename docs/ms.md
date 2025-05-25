@@ -9,7 +9,7 @@ It focused on building a vowel recognition front-end using:
 - **Digital Signal Processing (DSP)** — including FFTs, pre-emphasis filters, Mel filter banks, and MFCC extraction
 - A frontend that visualized time-domain signals and converted them into phoneme-friendly features
 
-The system was part of a larger academic effort: the **ACORNS project**, which aimed to support Native American language revitalization through technology. It emphasized vowel-level recognition as a building block for phonetic precision in low-resource language education.
+The system was part of a larger academic effort by Dr Dan Harvey and Southern Oregon University CS department for tthe **ACquisition Of Restored Native Speech (ACORNS) project**. ACORNS aimed to support Native American language revitalization through technology. It emphasized vowel-level recognition as a building block for phonetic precision in low-resource language education. ACORNS is publicly available on [github](https://github.com/language-apps).
 
 ### Lessons and Reflection
 
@@ -22,7 +22,6 @@ ParlaBot, in many ways, picks up where that early project left off — this time
 
 ### For the Curious
 
-If you want to dig into the original thesis, here it is in all its Java/NetBeans/CVS glory:
-
+If you want to dig into my original thesis, with help from a Libray Department at SOU I was able to track down a copy. Here it is in all its Java/NetBeans/CVS glory. 
 **[Download the thesis (PDF)](/docs/MastersThesis-Creating_A_Frontend_for_a_SpeechRecognitonSystem.pdf)**
 
