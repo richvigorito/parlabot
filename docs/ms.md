@@ -21,6 +21,6 @@ ParlaBot, in many ways, picks up where that early project left off — this time
 - Italian as the focus, inspired by personal language learning
 
 ### For the Curious
-Thanks to the wonderful staff at The Library Department at SOU I was able to ontain my masters thesis, if you'd like to dig into it.  Here it is in all its Java/NetBeans/CVS glory. 
+Thanks to the wonderful staff at The Library Department at SOU I was able to ontain a copy of my masters thesis. For the curious, here it is in all its Java/NetBeans/CVS glory. 
 **[Download the thesis (PDF)](/docs/MastersThesis-Creating_A_Frontend_for_a_SpeechRecognitonSystem.pdf)**
 
