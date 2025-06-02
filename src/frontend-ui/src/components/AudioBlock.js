@@ -5,39 +5,36 @@ function AudioBlock({ block }) {
     
     console.log("block: ",block)
   return (
-    <div style={{ border: '1px solid #ccc', marginBottom: 20, padding: 10 }}>
-      <h3>Audio Block: {block.id}</h3>
-      
-      <div>
-        <strong>Input File:</strong>
-        <audio controls src={`http://localhost:8000${block.input_file}`} /> 
-        <Waveform audioUrl={`http://localhost:8000${block.input_file}`} />
-      </div>
+    <div className="audio-block-container">
+        <h3 style={{ marginBottom: '0.5rem' }}>Audio Block: {block.id}</h3>
 
-      <div>
-        <strong>Filters:</strong>
-        {block.transformations.map((filter, i) => (
-          <div key={i} style={{ marginLeft: 20, marginTop: 10 }}>
-            <div>{filter.filter_name}</div>
-              <audio controls src={`http://localhost:8000${filter.output_file}`} /> 
-              <Waveform audioUrl={`http://localhost:8000${filter.output_file}`} />
-          </div>
-        ))}
-      </div>
+        <div className="audio-section">
+          <strong>Input File:</strong>
+          <Waveform audioUrl={`http://localhost:8000${block.input_file}`} />
+        </div>
 
-      <div>
-        <strong>Output File:</strong>
-        <audio controls src={`http://localhost:8000${block.output_file}`} /> 
-        <Waveform audioUrl={`http://localhost:8000${block.output_file}`} />
-      </div>
+        <div className="audio-section">
+          <strong>Filters:</strong>
+          {block.transformations.map((filter, i) => (
+            <div key={i} className="filter-block">
+              <div>{filter.filter_name}</div>
+                <Waveform audioUrl={`http://localhost:8000${filter.output_file}`} />
+            </div>
+          ))}
+        </div>
 
-      <div>
-        <strong>Transcription:</strong> {block.transcription}
-      </div>
+        <div className="audio-section">
+          <strong>Output File:</strong>
+          <Waveform audioUrl={`http://localhost:8000${block.output_file}`} />
+        </div>
 
-      <div>
-        <strong>Pronunciation Score:</strong> {block.pronunciation_score}
-      </div>
+        <div className="audio-section">
+          <strong>Transcription:</strong> {block.transcription}
+        </div>
+
+        <div className="audio-section">
+          <strong>Pronunciation Score:</strong> {block.pronunciation_score}
+        </div>
     </div>
   );
 }

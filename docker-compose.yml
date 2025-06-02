@@ -20,7 +20,9 @@ services:
     volumes:
       - stt-shared:/app/shared
       - ./src/stt-service:/app
-    command: uvicorn stt:app --host 0.0.0.0 --port 5001 --reload
+    environment:
+      - PYTHONPATH=/app
+    command: uvicorn main:app --host 0.0.0.0 --port 5001 --reload
 
   mongo:
     image: mongo:7
@@ -39,6 +41,7 @@ services:
       - mongo
     environment:
       - MONGO_URL=mongodb://mongo:27017 
+      - PYTHONPATH=/app
     volumes:
       - ./src/phrase-service:/app
     command: uvicorn app:app --host 0.0.0.0 --port 5002 --reload

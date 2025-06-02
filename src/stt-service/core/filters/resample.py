@@ -1,7 +1,7 @@
 import torchaudio
 import torch
 import io
-from filters.base_filter import Filter
+from core.filters.base_filter import Filter
 
 
 class ResampleTo16k(Filter):

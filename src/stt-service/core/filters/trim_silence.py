@@ -1,7 +1,7 @@
 import torchaudio
 import torchaudio.transforms as T
 import io
-from filters.base_filter import Filter
+from core.filters.base_filter import Filter
 
 class TrimSilence(Filter):
     def run_filter(self, audio_bytes: bytes) -> bytes:

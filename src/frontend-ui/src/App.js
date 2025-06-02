@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import './App.css';
 import MicRecorder from 'mic-recorder-to-mp3';
 import AudioBlock from './components/AudioBlock';
+
 
 import en from './locales/en.json';
 import it from './locales/it.json';
@@ -21,7 +23,7 @@ function App() {
   const t = locales[lang];
 
   const fetchRandomPhrase = async () => {
-    const res = await fetch("http://localhost:5002/phrase/random");
+    const res = await fetch("http://localhost:5002/phrases/random");
     const phrase = await res.json();
     setRandomPhrase(phrase);
   };
@@ -75,46 +77,45 @@ function App() {
             >IT</button>
         </div>
 
-        
 
         <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-          <h1>{t.title}</h1>
+            <h1>{t.title}</h1>
 
-          {!isRecording ? (
-            <button onClick={startRecording}>{t.startRecording}</button>
-          ) : (
-            <button onClick={stopRecording}>{t.stopRecording}</button>
-          )}
-
-          {loading && <p className="loading-text">{t.processing}</p>}
-
-          <div className="random-phrase-block">
-            <button onClick={fetchRandomPhrase}>{t.getPhrase}</button>
-                {randomPhrase && (
-                <div style={{ marginTop: '1rem' }}>
-                  <p><strong>{t.trySaying}:</strong> {randomPhrase.text}</p>
-                  <audio controls>
-                    <source src={`http://localhost:5002${randomPhrase.audio_url}`} type="audio/mpeg" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
+            {!isRecording ? (
+                <button onClick={startRecording}>{t.startRecording}</button>
+            ) : (
+                <button onClick={stopRecording}>{t.stopRecording}</button>
             )}
-          </div>
 
-          {response && (
-            <div className="response-block">
-              <p><strong>{t.expected}:</strong> {response.target}</p>
-              <p><strong>{t.youSaid}:</strong> {response.you_said}</p>
-              <p><strong>{t.feedback}:</strong> {JSON.stringify(response.feedback)}</p>
+            {loading && <p className="loading-text">{t.processing}</p>}
+
+            <div className="random-phrase-block">
+                <button onClick={fetchRandomPhrase}>{t.getPhrase}</button>
+                {randomPhrase && (
+                    <div className="audio-section">
+                        <p><strong>{t.trySaying}:</strong> {randomPhrase.text}</p>
+                        <audio controls>
+                            <source src={`http://localhost:5002${randomPhrase.audio_url}`} type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                )}
             </div>
-          )}
 
-
-          <div className="audio-blocks-container">
-           {audioBlocks && audioBlocks.map((block, i) => (
-                <AudioBlock key={i} block={block} />
-            ))} 
-          </div>
+            <div className="audio-blocks-container">
+              {audioBlocks && audioBlocks.map((block, i) => (
+                <div key={i} className="audio-block-with-response">
+                  {block.response && (
+                    <div className="response-block">
+                      <p><strong>{t.expected}:</strong> {block.response.target}</p>
+                      <p><strong>{t.youSaid}:</strong> {block.response.you_said}</p>
+                      <p><strong>{t.feedback}:</strong> {JSON.stringify(block.response.feedback)}</p>
+                    </div>
+                  )}
+                  <AudioBlock block={block} />
+                </div>
+              ))}
+            </div>
         </div>
     </div>
   );
