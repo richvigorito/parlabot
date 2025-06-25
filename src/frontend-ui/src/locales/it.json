@@ -1,12 +1,17 @@
 {
-  "title": "ParlaBot: Parla Italiano ☕",
-  "startRecording": "Parlarmi",
+  "title": "ParlaBot: Un Allentore di Pronuncia della Lingua Italiana ☕",
+  "using": "Usando",
+  "chooseDifferentSpeaker": "Fare clic su ▶️ per campionare altri oratori e su ✅ per cambiare oratore.",
+  "startRecording": "Ripeti la frase di destinazione",
   "stopRecording": "Ferma e Analizza",
   "processing": "Elaborazione...",
   "expected": "Aspettato",
-  "youSaid": "Hai detto",
+  "youSaid": "Hai Detto",
   "feedback": "Feedback",
-  "getPhrase": "Ottieni una frase",
-  "trySaying": "Provi a dire"
+  "getPhrase": "Ottieni Una Frase Casuale",
+  "selectLevel": "Scegli il livello",
+  "showTranslations": "Mostra i Traducioni",
+  "hideTranslations": "Nascodi i Traducioni",
+  "trySaying": "Provi a dire",
+  "pipelines": "Pipeline di Pre-Elaborazione"
 }
-

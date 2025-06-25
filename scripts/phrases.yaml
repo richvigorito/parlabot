@@ -1,0 +1,18 @@
+- level: A1
+  text: Ciao, come va?
+  translation: Hello, how's it going?
+  category: greeting
+  sources:
+    - source_name: google
+      speaker: it-IT-Wavenet-C
+      audio_url: ""   # will be filled in by your TTS system
+
+- level: B2
+  text: Vorrei prenotare un tavolo per due.
+  translation: I would like to book a table for two.
+  category: restaurant
+  sources:
+    - source_name: google
+      speaker: it-IT-Wavenet-C
+      audio_url: ""   # will be filled in by your TTS system
+

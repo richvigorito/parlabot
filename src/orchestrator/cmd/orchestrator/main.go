@@ -2,7 +2,10 @@ package main
 
 import (
     "log"
-    "orchestrator/internal/http/api"
+    //"orchestrator/internal/http/api"
+    "orchestrator/internal/services"
+    "orchestrator/internal/http/handlers"
+    "orchestrator/internal/clients"
 
     "github.com/gin-contrib/cors"
     "github.com/gin-gonic/gin"
@@ -22,6 +25,14 @@ func main() {
     fmt.Println("👀 starting orchestrator log")
 
     fmt.Println("entering main")
+
+    // Initialize services, clients and handlers
+	preprocessingClient := clients.NewPreprocessingClient("http://audio-preprocessing-service:5003")
+	sttClient := clients.NewSTTClient("http://stt-service:5001")
+	transcriptionService := services.NewTranscriptionService(preprocessingClient, sttClient)
+    transcribeHandler := handlers.NewTranscribeHandler(transcriptionService)
+
+
     r := gin.Default()
     
     r.Use(cors.New(cors.Config{
@@ -34,7 +45,10 @@ func main() {
     }))
 
 
-    api.RegisterRoutes(r)
+    // api.RegisterRoutes(r)
+    r.Static("/files", "/app/shared")
+    apiGroup := r.Group("/api")
+    apiGroup.POST("/transcribe", transcribeHandler.HandleTranscribeMulti)
 
     if err := r.Run(":8000"); err != nil {
         log.Fatalf("Failed to run server: %v", err)

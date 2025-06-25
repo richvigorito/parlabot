@@ -1,0 +1,876 @@
+
+chdir(/etc/vim)
+fchdir() to previous dir
+sourcing "/etc/vim/vimrc"
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 23: sourcing "/usr/share/vim/vim91/debian.vim"
+finished sourcing /usr/share/vim/vim91/debian.vim
+continuing in /etc/vim/vimrc
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 34: sourcing "/usr/share/vim/vim91/syntax/syntax.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 20: sourcing "/usr/share/vim/vim91/syntax/synload.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 22: sourcing "/usr/share/vim/vim91/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim91/colors/lists)
+fchdir() to previous dir
+line 37: sourcing "/usr/share/vim/vim91/colors/lists/default.vim"
+finished sourcing /usr/share/vim/vim91/colors/lists/default.vim
+continuing in /usr/share/vim/vim91/syntax/syncolor.vim
+finished sourcing /usr/share/vim/vim91/syntax/syncolor.vim
+continuing in /usr/share/vim/vim91/syntax/synload.vim
+finished sourcing /usr/share/vim/vim91/syntax/synload.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 26: sourcing "/usr/share/vim/vim91/filetype.vim"
+not found in 'runtimepath': "ftdetect/*.vim"
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 0: sourcing "/usr/share/vim/vim91/scripts.vim"
+chdir(/usr/share/vim/vim91/autoload/dist)
+fchdir() to previous dir
+line 27: sourcing "/usr/share/vim/vim91/autoload/dist/script.vim"
+finished sourcing /usr/share/vim/vim91/autoload/dist/script.vim
+continuing in /usr/share/vim/vim91/scripts.vim
+finished sourcing /usr/share/vim/vim91/scripts.vim
+continuing in BufRead Autocommands for "*"
+Executing BufRead Autocommands for "*.txt"
+autocommand if getline('$') !~ 'vim:.*ft=help'|   setf text| endif
+
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (expand("<amatch>") =~# '\.conf$'^I|| getline(1) =~ '^#' || getline(2) =~ '^#'^I|| getline(3) =~ '^#' || getline(4) =~ '^#'^I|| getline(5) =~ '^#') |   setf FALLBACK conf | endif
+
+finished sourcing /usr/share/vim/vim91/syntax/syntax.vim
+continuing in /etc/vim/vimrc
+finished sourcing /etc/vim/vimrc
+chdir(/home/rich-vigorito)
+fchdir() to previous dir
+sourcing "$HOME/.vimrc"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 5: sourcing "/usr/share/vim/vim91/syntax/syntax.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 16: sourcing "/usr/share/vim/vim91/syntax/nosyntax.vim"
+Executing BufEnter Autocommands for "*"
+autocommand syn clear
+
+autocommand if exists("b:current_syntax") | unlet b:current_syntax | endif
+
+finished sourcing /usr/share/vim/vim91/syntax/nosyntax.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 20: sourcing "/usr/share/vim/vim91/syntax/synload.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 22: sourcing "/usr/share/vim/vim91/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim91/syntax/syncolor.vim
+continuing in /usr/share/vim/vim91/syntax/synload.vim
+finished sourcing /usr/share/vim/vim91/syntax/synload.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+finished sourcing /usr/share/vim/vim91/syntax/syntax.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim91/filetype.vim"
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim91/ftplugin.vim"
+finished sourcing /usr/share/vim/vim91/ftplugin.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim91/indent.vim"
+finished sourcing /usr/share/vim/vim91/indent.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/home/rich-vigorito/.vim/autoload)
+fchdir() to previous dir
+line 33: sourcing "/home/rich-vigorito/.vim/autoload/plug.vim"
+finished sourcing /home/rich-vigorito/.vim/autoload/plug.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 14: sourcing "/usr/share/vim/vim91/ftoff.vim"
+finished sourcing /usr/share/vim/vim91/ftoff.vim
+continuing in plug#end
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot)
+fchdir() to previous dir
+line 88: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim"
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot)
+fchdir() to previous dir
+line 1: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim"
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot)
+fchdir() to previous dir
+line 148: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 148: sourcing "/usr/share/vim/vim91/filetype.vim"
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect)
+fchdir() to previous dir
+line 2918: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim
+continuing in /usr/share/vim/vim91/filetype.vim
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect)
+fchdir() to previous dir
+line 149: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/extras)
+fchdir() to previous dir
+line 3576: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/extras/filetype.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/extras/filetype.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim91/filetype.vim"
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim91/ftplugin.vim"
+finished sourcing /usr/share/vim/vim91/ftplugin.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim91/indent.vim"
+finished sourcing /usr/share/vim/vim91/indent.vim
+continuing in plug#end
+finished sourcing $HOME/.vimrc
+not found in 'packpath': "pack/*/start/*"
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/plugin)
+fchdir() to previous dir
+sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim"
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/autoload)
+fchdir() to previous dir
+line 59: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree.vim
+continuing in /home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 1: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/path.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/path.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 2: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_controller.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_controller.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 3: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_item.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_item.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 4: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/key_map.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/key_map.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/bookmark.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/bookmark.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 6: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 7: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 8: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/opener.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/opener.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 9: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/creator.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/creator.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 10: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/flag_set.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/flag_set.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 11: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/nerdtree.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/nerdtree.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 12: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/ui.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/ui.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 13: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/event.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/event.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 14: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/notifier.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/notifier.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree)
+fchdir() to previous dir
+line 148: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim
+continuing in /home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim
+continuing in nerdtree#postSourceActions
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim
+continuing in nerdtree#postSourceActions
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/vcs.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/vcs.vim
+continuing in nerdtree#postSourceActions
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/plugin)
+fchdir() to previous dir
+sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/plugin/polyglot.vim"
+--- Autocommands ---
+chdir(/usr/share/vim/vim91/macros)
+fchdir() to previous dir
+line 99: sourcing "/usr/share/vim/vim91/macros/matchit.vim"
+not found in 'packpath': "pack/*/start/matchit"
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim/plugged/vim-airline)
+fchdir() to previous dir
+chdir(/var/lib/vim/addons)
+fchdir() to previous dir
+chdir(/etc/vim)
+fchdir() to previous dir
+chdir(/usr/share/vim/vimfiles)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim91/pack/dist/opt)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim91/pack/dist/opt/matchit/plugin)
+fchdir() to previous dir
+line 4: sourcing "/usr/share/vim/vim91/pack/dist/opt/matchit/plugin/matchit.vim"
+finished sourcing /usr/share/vim/vim91/pack/dist/opt/matchit/plugin/matchit.vim
+continuing in /usr/share/vim/vim91/macros/matchit.vim
+finished sourcing /usr/share/vim/vim91/macros/matchit.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/plugin/polyglot.vim
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/plugin/polyglot.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/getscriptPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/getscriptPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/gzip.vim"
+finished sourcing /usr/share/vim/vim91/plugin/gzip.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/logiPat.vim"
+finished sourcing /usr/share/vim/vim91/plugin/logiPat.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/manpager.vim"
+finished sourcing /usr/share/vim/vim91/plugin/manpager.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/matchparen.vim"
+finished sourcing /usr/share/vim/vim91/plugin/matchparen.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/netrwPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/netrwPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/rrhelper.vim"
+finished sourcing /usr/share/vim/vim91/plugin/rrhelper.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/spellfile.vim"
+finished sourcing /usr/share/vim/vim91/plugin/spellfile.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/tarPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/tarPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/tohtml.vim"
+finished sourcing /usr/share/vim/vim91/plugin/tohtml.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/vimballPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/vimballPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/zipPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/zipPlugin.vim
+not found in 'packpath': "pack/*/start/*"
+not found in 'runtimepath': "plugin/**/*.vim"
+Reading viminfo file "/home/rich-vigorito/.viminfo" info oldfiles
+"somefile.txt" [New]
+Reading viminfo file "/home/rich-vigorito/.viminfo" marks
+Executing BufNewFile Autocommands for "*"
+autocommand if (&ft == "" || &ft == "conf") && expand("<afile>:e") == "" | call polyglot#shebang#Detect() | endif
+
+Executing BufNewFile Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 0: sourcing "/usr/share/vim/vim91/scripts.vim"
+finished sourcing /usr/share/vim/vim91/scripts.vim
+continuing in BufNewFile Autocommands for "*"
+Executing BufNewFile Autocommands for "*.txt"
+autocommand if getline('$') !~ 'vim:.*ft=help'|   setf text| endif
+
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing FileType Autocommands for "*"
+autocommand call LoadFTPlugin()
+
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/ftplugin)
+fchdir() to previous dir
+line 18: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/ftplugin/text.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/ftplugin/text.vim
+continuing in <SNR>12_LoadFTPlugin
+chdir(/usr/share/vim/vim91/ftplugin)
+fchdir() to previous dir
+line 18: sourcing "/usr/share/vim/vim91/ftplugin/text.vim"
+finished sourcing /usr/share/vim/vim91/ftplugin/text.vim
+continuing in <SNR>12_LoadFTPlugin
+Executing FileType Autocommands for "*"
+autocommand call s:LoadIndent()
+
+not found in 'runtimepath': "indent/text.vim"
+Executing BufNewFile Autocommands for "*.txt"
+autocommand if getline('$') !~ 'vim:.*ft=help'|   setf text| endif
+
+Executing BufWinEnter Autocommands for "*"
+autocommand if &ft == "" && expand("<afile>:e") == "" | call s:Observe() | endif
+
+Executing BufWinEnter Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+Executing BufEnter Autocommands for "*"
+autocommand call s:detect_indent()
+
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot)
+fchdir() to previous dir
+line 17: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/sleuth.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/sleuth.vim
+continuing in <SNR>17_detect_indent
+Calling shell to execute: "[[ ${BASH_VERSINFO[0]} -ge 4 ]] && shopt -s globstar; vimglob() { while [ $# -ge 1 ]; do echo "$1"; shift; done }; vimglob >/tmp/vfWTo5X/0 /home/rich-vigorito/Development/parlabot/src/phrase-service/services/tts/{*.text,README,.git,.svn,.hg}"
+
+Calling shell to execute: "[[ ${BASH_VERSINFO[0]} -ge 4 ]] && shopt -s globstar; vimglob() { while [ $# -ge 1 ]; do echo "$1"; shift; done }; vimglob >/tmp/vfWTo5X/1 /home/rich-vigorito/Development/parlabot/src/phrase-service/services/{*.text,README,.git,.svn,.hg}"
+
+Calling shell to execute: "[[ ${BASH_VERSINFO[0]} -ge 4 ]] && shopt -s globstar; vimglob() { while [ $# -ge 1 ]; do echo "$1"; shift; done }; vimglob >/tmp/vfWTo5X/2 /home/rich-vigorito/Development/parlabot/src/phrase-service/{*.text,README,.git,.svn,.hg}"
+
+Executing BufEnter Autocommands for "*"
+autocommand call nerdtree#checkForBrowse(expand('<amatch>'))
+
+Executing BufEnter Autocommands for "*"
+autocommand sil call s:LocalBrowse(expand("<amatch>"))
+
+Executing VimEnter Autocommands for "*"
+autocommand call PolyglotVerify()
+
+autocommand if argc() == 0 | NERDTree | endif
+
+Executing VimEnter Autocommands for "*"
+autocommand silent! autocmd! FileExplorer
+
+autocommand call nerdtree#checkForBrowse(expand('<amatch>'))
+
+Executing CursorMoved Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+Type  :qa  and press <Enter> to exit Vim
+Executing CursorHold Autocommands for "*"
+autocommand silent! checktime
+
+
+Writing viminfo file "/home/rich-vigorito/.viminfo"
+chdir(/etc/vim)
+fchdir() to previous dir
+sourcing "/etc/vim/vimrc"
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 23: sourcing "/usr/share/vim/vim91/debian.vim"
+finished sourcing /usr/share/vim/vim91/debian.vim
+continuing in /etc/vim/vimrc
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 34: sourcing "/usr/share/vim/vim91/syntax/syntax.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 20: sourcing "/usr/share/vim/vim91/syntax/synload.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 22: sourcing "/usr/share/vim/vim91/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim91/colors/lists)
+fchdir() to previous dir
+line 37: sourcing "/usr/share/vim/vim91/colors/lists/default.vim"
+finished sourcing /usr/share/vim/vim91/colors/lists/default.vim
+continuing in /usr/share/vim/vim91/syntax/syncolor.vim
+finished sourcing /usr/share/vim/vim91/syntax/syncolor.vim
+continuing in /usr/share/vim/vim91/syntax/synload.vim
+finished sourcing /usr/share/vim/vim91/syntax/synload.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 26: sourcing "/usr/share/vim/vim91/filetype.vim"
+not found in 'runtimepath': "ftdetect/*.vim"
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 0: sourcing "/usr/share/vim/vim91/scripts.vim"
+chdir(/usr/share/vim/vim91/autoload/dist)
+fchdir() to previous dir
+line 27: sourcing "/usr/share/vim/vim91/autoload/dist/script.vim"
+finished sourcing /usr/share/vim/vim91/autoload/dist/script.vim
+continuing in /usr/share/vim/vim91/scripts.vim
+finished sourcing /usr/share/vim/vim91/scripts.vim
+continuing in BufRead Autocommands for "*"
+Executing BufRead Autocommands for "*.txt"
+autocommand if getline('$') !~ 'vim:.*ft=help'|   setf text| endif
+
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing BufRead Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (expand("<amatch>") =~# '\.conf$'^I|| getline(1) =~ '^#' || getline(2) =~ '^#'^I|| getline(3) =~ '^#' || getline(4) =~ '^#'^I|| getline(5) =~ '^#') |   setf FALLBACK conf | endif
+
+finished sourcing /usr/share/vim/vim91/syntax/syntax.vim
+continuing in /etc/vim/vimrc
+finished sourcing /etc/vim/vimrc
+chdir(/home/rich-vigorito)
+fchdir() to previous dir
+sourcing "$HOME/.vimrc"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 5: sourcing "/usr/share/vim/vim91/syntax/syntax.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 16: sourcing "/usr/share/vim/vim91/syntax/nosyntax.vim"
+Executing BufEnter Autocommands for "*"
+autocommand syn clear
+
+autocommand if exists("b:current_syntax") | unlet b:current_syntax | endif
+
+finished sourcing /usr/share/vim/vim91/syntax/nosyntax.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 20: sourcing "/usr/share/vim/vim91/syntax/synload.vim"
+chdir(/usr/share/vim/vim91/syntax)
+fchdir() to previous dir
+line 22: sourcing "/usr/share/vim/vim91/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim91/syntax/syncolor.vim
+continuing in /usr/share/vim/vim91/syntax/synload.vim
+finished sourcing /usr/share/vim/vim91/syntax/synload.vim
+continuing in /usr/share/vim/vim91/syntax/syntax.vim
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+finished sourcing /usr/share/vim/vim91/syntax/syntax.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim91/filetype.vim"
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim91/ftplugin.vim"
+finished sourcing /usr/share/vim/vim91/ftplugin.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim91/indent.vim"
+finished sourcing /usr/share/vim/vim91/indent.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/home/rich-vigorito/.vim/autoload)
+fchdir() to previous dir
+line 33: sourcing "/home/rich-vigorito/.vim/autoload/plug.vim"
+finished sourcing /home/rich-vigorito/.vim/autoload/plug.vim
+continuing in /home/rich-vigorito/.vimrc
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 14: sourcing "/usr/share/vim/vim91/ftoff.vim"
+finished sourcing /usr/share/vim/vim91/ftoff.vim
+continuing in plug#end
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot)
+fchdir() to previous dir
+line 88: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim"
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot)
+fchdir() to previous dir
+line 1: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim"
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot)
+fchdir() to previous dir
+line 148: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 148: sourcing "/usr/share/vim/vim91/filetype.vim"
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect)
+fchdir() to previous dir
+line 2918: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim
+continuing in /usr/share/vim/vim91/filetype.vim
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect)
+fchdir() to previous dir
+line 149: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/ftdetect/polyglot.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/extras)
+fchdir() to previous dir
+line 3576: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/extras/filetype.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/extras/filetype.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/init.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/filetype.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim91/filetype.vim"
+finished sourcing /usr/share/vim/vim91/filetype.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim91/ftplugin.vim"
+finished sourcing /usr/share/vim/vim91/ftplugin.vim
+continuing in plug#end
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 88: sourcing "/usr/share/vim/vim91/indent.vim"
+finished sourcing /usr/share/vim/vim91/indent.vim
+continuing in plug#end
+finished sourcing $HOME/.vimrc
+not found in 'packpath': "pack/*/start/*"
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/plugin)
+fchdir() to previous dir
+sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim"
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/autoload)
+fchdir() to previous dir
+line 59: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree.vim
+continuing in /home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 1: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/path.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/path.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 2: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_controller.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_controller.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 3: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_item.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/menu_item.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 4: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/key_map.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/key_map.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/bookmark.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/bookmark.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 6: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_file_node.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 7: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 8: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/opener.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/opener.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 9: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/creator.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/creator.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 10: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/flag_set.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/flag_set.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 11: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/nerdtree.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/nerdtree.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 12: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/ui.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/ui.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 13: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/event.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/event.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 14: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/notifier.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/lib/nerdtree/notifier.vim
+continuing in nerdtree#loadClassFiles
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree)
+fchdir() to previous dir
+line 148: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim
+continuing in /home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim
+continuing in nerdtree#postSourceActions
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim
+continuing in nerdtree#postSourceActions
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/vcs.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/nerdtree_plugin/vcs.vim
+continuing in nerdtree#postSourceActions
+finished sourcing /home/rich-vigorito/.vim/plugged/nerdtree/plugin/NERD_tree.vim
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/plugin)
+fchdir() to previous dir
+sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/plugin/polyglot.vim"
+--- Autocommands ---
+chdir(/usr/share/vim/vim91/macros)
+fchdir() to previous dir
+line 99: sourcing "/usr/share/vim/vim91/macros/matchit.vim"
+not found in 'packpath': "pack/*/start/matchit"
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim/plugged/nerdtree)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim/plugged/vim-airline)
+fchdir() to previous dir
+chdir(/var/lib/vim/addons)
+fchdir() to previous dir
+chdir(/etc/vim)
+fchdir() to previous dir
+chdir(/usr/share/vim/vimfiles)
+fchdir() to previous dir
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim91/pack/dist/opt)
+fchdir() to previous dir
+chdir(/usr/share/vim/vim91/pack/dist/opt/matchit/plugin)
+fchdir() to previous dir
+line 4: sourcing "/usr/share/vim/vim91/pack/dist/opt/matchit/plugin/matchit.vim"
+finished sourcing /usr/share/vim/vim91/pack/dist/opt/matchit/plugin/matchit.vim
+continuing in /usr/share/vim/vim91/macros/matchit.vim
+finished sourcing /usr/share/vim/vim91/macros/matchit.vim
+continuing in /home/rich-vigorito/.vim/plugged/vim-polyglot/plugin/polyglot.vim
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/plugin/polyglot.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/getscriptPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/getscriptPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/gzip.vim"
+finished sourcing /usr/share/vim/vim91/plugin/gzip.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/logiPat.vim"
+finished sourcing /usr/share/vim/vim91/plugin/logiPat.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/manpager.vim"
+finished sourcing /usr/share/vim/vim91/plugin/manpager.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/matchparen.vim"
+finished sourcing /usr/share/vim/vim91/plugin/matchparen.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/netrwPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/netrwPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/rrhelper.vim"
+finished sourcing /usr/share/vim/vim91/plugin/rrhelper.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/spellfile.vim"
+finished sourcing /usr/share/vim/vim91/plugin/spellfile.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/tarPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/tarPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/tohtml.vim"
+finished sourcing /usr/share/vim/vim91/plugin/tohtml.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/vimballPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/vimballPlugin.vim
+chdir(/usr/share/vim/vim91/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim91/plugin/zipPlugin.vim"
+finished sourcing /usr/share/vim/vim91/plugin/zipPlugin.vim
+not found in 'packpath': "pack/*/start/*"
+not found in 'runtimepath': "plugin/**/*.vim"
+Reading viminfo file "/home/rich-vigorito/.viminfo" info oldfiles
+"somefile.txt" [New]
+Reading viminfo file "/home/rich-vigorito/.viminfo" marks
+Executing BufNewFile Autocommands for "*"
+autocommand if (&ft == "" || &ft == "conf") && expand("<afile>:e") == "" | call polyglot#shebang#Detect() | endif
+
+Executing BufNewFile Autocommands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+chdir(/usr/share/vim/vim91)
+fchdir() to previous dir
+line 0: sourcing "/usr/share/vim/vim91/scripts.vim"
+finished sourcing /usr/share/vim/vim91/scripts.vim
+continuing in BufNewFile Autocommands for "*"
+Executing BufNewFile Autocommands for "*.txt"
+autocommand if getline('$') !~ 'vim:.*ft=help'|   setf text| endif
+
+Executing FileType Autocommands for "*"
+autocommand 0verbose exe "set syntax=" . expand("<amatch>")
+
+Executing FileType Autocommands for "*"
+autocommand call LoadFTPlugin()
+
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/ftplugin)
+fchdir() to previous dir
+line 18: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/ftplugin/text.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/ftplugin/text.vim
+continuing in <SNR>12_LoadFTPlugin
+chdir(/usr/share/vim/vim91/ftplugin)
+fchdir() to previous dir
+line 18: sourcing "/usr/share/vim/vim91/ftplugin/text.vim"
+finished sourcing /usr/share/vim/vim91/ftplugin/text.vim
+continuing in <SNR>12_LoadFTPlugin
+Executing FileType Autocommands for "*"
+autocommand call s:LoadIndent()
+
+not found in 'runtimepath': "indent/text.vim"
+Executing BufNewFile Autocommands for "*.txt"
+autocommand if getline('$') !~ 'vim:.*ft=help'|   setf text| endif
+
+Executing BufWinEnter Autocommands for "*"
+autocommand if &ft == "" && expand("<afile>:e") == "" | call s:Observe() | endif
+
+Executing BufWinEnter Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+Executing BufEnter Autocommands for "*"
+autocommand call s:detect_indent()
+
+chdir(/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot)
+fchdir() to previous dir
+line 17: sourcing "/home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/sleuth.vim"
+finished sourcing /home/rich-vigorito/.vim/plugged/vim-polyglot/autoload/polyglot/sleuth.vim
+continuing in <SNR>17_detect_indent
+Calling shell to execute: "[[ ${BASH_VERSINFO[0]} -ge 4 ]] && shopt -s globstar; vimglob() { while [ $# -ge 1 ]; do echo "$1"; shift; done }; vimglob >/tmp/v6fNbGx/0 /home/rich-vigorito/Development/parlabot/src/phrase-service/services/tts/{*.text,README,.git,.svn,.hg}"
+
+Calling shell to execute: "[[ ${BASH_VERSINFO[0]} -ge 4 ]] && shopt -s globstar; vimglob() { while [ $# -ge 1 ]; do echo "$1"; shift; done }; vimglob >/tmp/v6fNbGx/1 /home/rich-vigorito/Development/parlabot/src/phrase-service/services/{*.text,README,.git,.svn,.hg}"
+
+Calling shell to execute: "[[ ${BASH_VERSINFO[0]} -ge 4 ]] && shopt -s globstar; vimglob() { while [ $# -ge 1 ]; do echo "$1"; shift; done }; vimglob >/tmp/v6fNbGx/2 /home/rich-vigorito/Development/parlabot/src/phrase-service/{*.text,README,.git,.svn,.hg}"
+
+Executing BufEnter Autocommands for "*"
+autocommand call nerdtree#checkForBrowse(expand('<amatch>'))
+
+Executing BufEnter Autocommands for "*"
+autocommand sil call s:LocalBrowse(expand("<amatch>"))
+
+Executing VimEnter Autocommands for "*"
+autocommand call PolyglotVerify()
+
+autocommand if argc() == 0 | NERDTree | endif
+
+Executing VimEnter Autocommands for "*"
+autocommand silent! autocmd! FileExplorer
+
+autocommand call nerdtree#checkForBrowse(expand('<amatch>'))
+
+Executing CursorMoved Autocommands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+Executing CursorHold Autocommands for "*"
+autocommand silent! checktime
+
+
+Writing viminfo file "/home/rich-vigorito/.viminfo"

@@ -1,0 +1,48 @@
+.top-banner {
+  background-color: #111;
+  color: yellow;
+  font-size: 0.85rem;
+  padding: 0.25rem 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.top-banner a {
+  color: yellow;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.top-banner a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.mode-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.mode {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.mode.active {
+  background: #008080;
+  color: white;
+}
+

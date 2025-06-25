@@ -1,0 +1,546 @@
+[
+  {
+    "level": "A1",
+    "category": ["greetings", "basics"],
+    "phrase": "Ciao, come stai?",
+    "translation": "Hi, how are you?"
+  },
+  {
+    "level": "A1",
+    "category": ["introductions", "names"],
+    "phrase": "Mi chiamo Luca.",
+    "translation": "My name is Luca."
+  },
+  {
+    "level": "A1",
+    "category": ["ordering", "food"],
+    "phrase": "Vorrei un caffè, per favore.",
+    "translation": "I’d like a coffee, please."
+  },
+  {
+    "level": "A1",
+    "category": ["directions"],
+    "phrase": "Dov'è il bagno?",
+    "translation": "Where is the bathroom?"
+  },
+  {
+    "level": "A1",
+    "category": ["numbers", "money"],
+    "phrase": "Quanto costa questo?",
+    "translation": "How much does this cost?"
+  },
+  {
+    "level": "A1",
+    "category": ["greetings"],
+    "phrase": "Buongiorno!",
+    "translation": "Good morning!"
+  },
+  {
+    "level": "A1",
+    "category": ["farewell"],
+    "phrase": "Arrivederci!",
+    "translation": "Goodbye!"
+  },
+  {
+    "level": "A1",
+    "category": ["essentials"],
+    "phrase": "Non parlo italiano.",
+    "translation": "I don’t speak Italian."
+  },
+  {
+    "level": "A1",
+    "category": ["essentials"],
+    "phrase": "Parli inglese?",
+    "translation": "Do you speak English?"
+  },
+  {
+    "level": "A1",
+    "category": ["emergency"],
+    "phrase": "Aiuto!",
+    "translation": "Help!"
+  },
+  {
+    "level": "A1",
+    "category": ["transport"],
+    "phrase": "Dove si prende l'autobus?",
+    "translation": "Where do you catch the bus?"
+  },
+  {
+    "level": "A1",
+    "category": ["weather"],
+    "phrase": "Che tempo fa oggi?",
+    "translation": "What’s the weather like today?"
+  },
+  {
+    "level": "A1",
+    "category": ["time"],
+    "phrase": "Che ore sono?",
+    "translation": "What time is it?"
+  },
+  {
+    "level": "A1",
+    "category": ["food"],
+    "phrase": "Ho fame.",
+    "translation": "I’m hungry."
+  },
+  {
+    "level": "A1",
+    "category": ["shopping"],
+    "phrase": "Accettate carte di credito?",
+    "translation": "Do you accept credit cards?"
+  },
+
+  {
+    "level": "A2",
+    "category": ["daily life", "routines"],
+    "phrase": "Di solito mi sveglio alle sette.",
+    "translation": "I usually wake up at seven."
+  },
+  {
+    "level": "A2",
+    "category": ["weather", "conversation"],
+    "phrase": "Oggi fa molto caldo.",
+    "translation": "Today it’s very hot."
+  },
+  {
+    "level": "A2",
+    "category": ["transport", "questions"],
+    "phrase": "A che ora parte il treno per Roma?",
+    "translation": "What time does the train to Rome leave?"
+  },
+  {
+    "level": "A2",
+    "category": ["shopping", "preferences"],
+    "phrase": "Mi piace questo vestito, lo compro.",
+    "translation": "I like this dress, I’ll buy it."
+  },
+  {
+    "level": "A2",
+    "category": ["directions", "places"],
+    "phrase": "La farmacia è dietro l’angolo.",
+    "translation": "The pharmacy is around the corner."
+  },
+  {
+    "level": "A2",
+    "category": ["social", "invitations"],
+    "phrase": "Vuoi venire a cena con noi?",
+    "translation": "Do you want to come to dinner with us?"
+  },
+  {
+    "level": "A2",
+    "category": ["chores"],
+    "phrase": "Devo fare la spesa.",
+    "translation": "I have to do the shopping."
+  },
+  {
+    "level": "A2",
+    "category": ["communication"],
+    "phrase": "Ti mando un messaggio più tardi.",
+    "translation": "I’ll send you a message later."
+  },
+  {
+    "level": "A2",
+    "category": ["free time"],
+    "phrase": "Mi piace guardare film nel tempo libero.",
+    "translation": "I like watching movies in my free time."
+  },
+  {
+    "level": "A2",
+    "category": ["travel"],
+    "phrase": "Abbiamo prenotato un albergo vicino al centro.",
+    "translation": "We booked a hotel near the center."
+  },
+  {
+    "level": "A2",
+    "category": ["conversation"],
+    "phrase": "Non ho capito, puoi ripetere?",
+    "translation": "I didn’t understand, can you repeat?"
+  },
+  {
+    "level": "A2",
+    "category": ["opinions"],
+    "phrase": "Penso che sia una buona idea.",
+    "translation": "I think it’s a good idea."
+  },
+  {
+    "level": "A2",
+    "category": ["feelings"],
+    "phrase": "Sono un po' stanco oggi.",
+    "translation": "I’m a bit tired today."
+  },
+  {
+    "level": "A2",
+    "category": ["questions"],
+    "phrase": "Hai già mangiato?",
+    "translation": "Have you already eaten?"
+  },
+  {
+    "level": "A2",
+    "category": ["ordering"],
+    "phrase": "Posso avere il conto, per favore?",
+    "translation": "Can I have the bill, please?"
+  },
+
+  {
+    "level": "B1",
+    "category": ["work", "phone"],
+    "phrase": "Mi dispiace, Mario non è in ufficio adesso.",
+    "translation": "I’m sorry, Mario isn’t in the office right now."
+  },
+  {
+    "level": "B1",
+    "category": ["opinions", "media"],
+    "phrase": "Secondo me, quel film era noioso.",
+    "translation": "In my opinion, that movie was boring."
+  },
+  {
+    "level": "B1",
+    "category": ["plans", "future"],
+    "phrase": "Domani andremo al mare, se il tempo è bello.",
+    "translation": "Tomorrow we’ll go to the beach if the weather is nice."
+  },
+  {
+    "level": "B1",
+    "category": ["travel", "booking"],
+    "phrase": "Vorrei prenotare una camera per due notti.",
+    "translation": "I’d like to book a room for two nights."
+  },
+  {
+    "level": "B1",
+    "category": ["health", "appointments"],
+    "phrase": "Devo fissare un appuntamento con il dottore.",
+    "translation": "I need to make a doctor’s appointment."
+  },
+  {
+    "level": "B1",
+    "category": ["feelings"],
+    "phrase": "Mi sento un po' giù oggi.",
+    "translation": "I feel a bit down today."
+  },
+  {
+    "level": "B1",
+    "category": ["arguments"],
+    "phrase": "Non sono d’accordo con te.",
+    "translation": "I don’t agree with you."
+  },
+  {
+    "level": "B1",
+    "category": ["instructions"],
+    "phrase": "Segui attentamente le istruzioni.",
+    "translation": "Follow the instructions carefully."
+  },
+  {
+    "level": "B1",
+    "category": ["technology"],
+    "phrase": "Ho bisogno di aggiornare il mio computer.",
+    "translation": "I need to update my computer."
+  },
+  {
+    "level": "B1",
+    "category": ["culture"],
+    "phrase": "Mi interessa molto la storia italiana.",
+    "translation": "I’m very interested in Italian history."
+  },
+  {
+    "level": "B1",
+    "category": ["events"],
+    "phrase": "C'è un concerto in piazza stasera.",
+    "translation": "There’s a concert in the square tonight."
+  },
+  {
+    "level": "B1",
+    "category": ["conversation"],
+    "phrase": "Ti va di parlare un po'?",
+    "translation": "Do you feel like talking a bit?"
+  },
+  {
+    "level": "B1",
+    "category": ["daily life"],
+    "phrase": "Ogni mattina bevo un caffè e leggo il giornale.",
+    "translation": "Every morning I drink coffee and read the newspaper."
+  },
+  {
+    "level": "B1",
+    "category": ["transport"],
+    "phrase": "Il traffico oggi è davvero pesante.",
+    "translation": "Traffic is really heavy today."
+  },
+  {
+    "level": "B1",
+    "category": ["shopping"],
+    "phrase": "Sto cercando un regalo per mia sorella.",
+    "translation": "I’m looking for a gift for my sister."
+  },
+  {
+    "level": "B2",
+    "category": ["debate", "opinions"],
+    "phrase": "Penso che sia importante discutere apertamente dei problemi.",
+    "translation": "I think it’s important to openly discuss problems."
+  },
+  {
+    "level": "B2",
+    "category": ["culture", "reading"],
+    "phrase": "Ho letto un articolo interessante sulla cultura italiana.",
+    "translation": "I read an interesting article about Italian culture."
+  },
+  {
+    "level": "B2",
+    "category": ["news", "media"],
+    "phrase": "Le notizie di oggi parlano di una nuova legge sul lavoro.",
+    "translation": "Today’s news talks about a new labor law."
+  },
+  {
+    "level": "B2",
+    "category": ["work", "emails"],
+    "phrase": "La contatterò non appena avrò ricevuto i documenti richiesti.",
+    "translation": "I’ll contact you as soon as I receive the requested documents."
+  },
+  {
+    "level": "B2",
+    "category": ["education", "goals"],
+    "phrase": "Mi sto preparando per superare l’esame di certificazione B2.",
+    "translation": "I’m preparing to pass the B2 certification exam."
+  },
+  {
+    "level": "B2",
+    "category": ["travel", "culture"],
+    "phrase": "Durante il viaggio ho scoperto molte tradizioni locali.",
+    "translation": "During the trip I discovered many local traditions."
+  },
+  {
+    "level": "B2",
+    "category": ["technology"],
+    "phrase": "L’innovazione tecnologica sta cambiando il mondo del lavoro.",
+    "translation": "Technological innovation is changing the world of work."
+  },
+  {
+    "level": "B2",
+    "category": ["opinions"],
+    "phrase": "Credo che l’ambiente debba essere una priorità.",
+    "translation": "I believe the environment should be a priority."
+  },
+  {
+    "level": "B2",
+    "category": ["economics", "news"],
+    "phrase": "L’economia italiana sta lentamente migliorando.",
+    "translation": "The Italian economy is slowly improving."
+  },
+  {
+    "level": "B2",
+    "category": ["career"],
+    "phrase": "Sto cercando nuove opportunità professionali.",
+    "translation": "I’m looking for new career opportunities."
+  },
+  {
+    "level": "B2",
+    "category": ["daily life"],
+    "phrase": "Gestire il tempo è fondamentale per la produttività.",
+    "translation": "Managing time is essential for productivity."
+  },
+  {
+    "level": "B2",
+    "category": ["study"],
+    "phrase": "Studio italiano ogni giorno per migliorare la mia grammatica.",
+    "translation": "I study Italian every day to improve my grammar."
+  },
+  {
+    "level": "B2",
+    "category": ["media"],
+    "phrase": "Guardo le notizie per restare aggiornato.",
+    "translation": "I watch the news to stay informed."
+  },
+  {
+    "level": "B2",
+    "category": ["politics"],
+    "phrase": "Il dibattito politico è stato molto acceso.",
+    "translation": "The political debate was very heated."
+  },
+  {
+    "level": "B2",
+    "category": ["society"],
+    "phrase": "La società moderna affronta molte sfide complesse.",
+    "translation": "Modern society faces many complex challenges."
+  },
+
+  {
+    "level": "C1",
+    "category": ["philosophy", "discussion"],
+    "phrase": "Nonostante le difficoltà, dobbiamo mantenere un atteggiamento ottimista.",
+    "translation": "Despite the difficulties, we must maintain an optimistic attitude."
+  },
+  {
+    "level": "C1",
+    "category": ["business", "negotiation"],
+    "phrase": "È fondamentale trovare un compromesso accettabile per entrambe le parti.",
+    "translation": "It’s essential to find a compromise acceptable to both parties."
+  },
+  {
+    "level": "C1",
+    "category": ["news", "opinion"],
+    "phrase": "L’articolo solleva una questione di grande attualità e complessità.",
+    "translation": "The article raises a very current and complex issue."
+  },
+  {
+    "level": "C1",
+    "category": ["formal", "debate"],
+    "phrase": "Benché io non sia completamente d'accordo, rispetto il tuo punto di vista.",
+    "translation": "Although I don’t fully agree, I respect your point of view."
+  },
+  {
+    "level": "C1",
+    "category": ["idioms", "culture"],
+    "phrase": "Chi dorme non piglia pesci.",
+    "translation": "You snooze, you lose."
+  },
+  {
+    "level": "C1",
+    "category": ["law", "rhetoric"],
+    "phrase": "Bisogna analizzare il contesto prima di giudicare.",
+    "translation": "You must analyze the context before judging."
+  },
+  {
+    "level": "C1",
+    "category": ["academic"],
+    "phrase": "L'argomento è stato trattato in diverse pubblicazioni scientifiche.",
+    "translation": "The topic has been addressed in several scientific publications."
+  },
+  {
+    "level": "C1",
+    "category": ["society"],
+    "phrase": "Viviamo in una società sempre più interconnessa.",
+    "translation": "We live in an increasingly interconnected society."
+  },
+  {
+    "level": "C1",
+    "category": ["conversation", "ethics"],
+    "phrase": "È una questione etica di grande rilevanza.",
+    "translation": "It’s an ethical issue of great importance."
+  },
+  {
+    "level": "C1",
+    "category": ["business"],
+    "phrase": "Il successo dipende da una strategia ben pianificata.",
+    "translation": "Success depends on a well-planned strategy."
+  },
+  {
+    "level": "C1",
+    "category": ["economics"],
+    "phrase": "Il mercato è instabile a causa dell’inflazione.",
+    "translation": "The market is unstable due to inflation."
+  },
+  {
+    "level": "C1",
+    "category": ["environment"],
+    "phrase": "È necessario adottare misure sostenibili.",
+    "translation": "Sustainable measures need to be adopted."
+  },
+  {
+    "level": "C1",
+    "category": ["writing"],
+    "phrase": "Scrivere saggi richiede chiarezza e coerenza.",
+    "translation": "Writing essays requires clarity and coherence."
+  },
+  {
+    "level": "C1",
+    "category": ["analysis"],
+    "phrase": "L’analisi deve essere supportata da dati concreti.",
+    "translation": "The analysis must be supported by concrete data."
+  },
+  {
+    "level": "C1",
+    "category": ["travel", "safety"],
+    "phrase": "La sicurezza dei viaggiatori è una priorità.",
+    "translation": "Traveler safety is a priority."
+  },
+
+  {
+    "level": "C2",
+    "category": ["formal", "rhetoric"],
+    "phrase": "È auspicabile che le istituzioni si adoperino con maggiore solerzia.",
+    "translation": "It is desirable that institutions act with greater diligence."
+  },
+  {
+    "level": "C2",
+    "category": ["academic", "philosophy"],
+    "phrase": "Il concetto di verità assoluta è spesso messo in discussione nel postmodernismo.",
+    "translation": "The concept of absolute truth is often questioned in postmodernism."
+  },
+  {
+    "level": "C2",
+    "category": ["legal", "society"],
+    "phrase": "La legge prevede sanzioni severe per tale infrazione.",
+    "translation": "The law provides severe penalties for such an infraction."
+  },
+  {
+    "level": "C2",
+    "category": ["rhetoric", "debate"],
+    "phrase": "Non si può prescindere da una visione olistica della questione.",
+    "translation": "One cannot disregard a holistic view of the issue."
+  },
+  {
+    "level": "C2",
+    "category": ["idioms", "expressions"],
+    "phrase": "A pensar male si fa peccato, ma spesso ci si indovina.",
+    "translation": "Thinking badly may be a sin, but it’s often correct."
+  },
+  {
+    "level": "C2",
+    "category": ["ethics", "society"],
+    "phrase": "Le implicazioni etiche di questa scelta sono significative.",
+    "translation": "The ethical implications of this choice are significant."
+  },
+  {
+    "level": "C2",
+    "category": ["politics"],
+    "phrase": "Le dinamiche geopolitiche influenzano le decisioni economiche.",
+    "translation": "Geopolitical dynamics influence economic decisions."
+  },
+  {
+    "level": "C2",
+    "category": ["formal", "communication"],
+    "phrase": "È necessario mantenere un linguaggio professionale in tutte le comunicazioni.",
+    "translation": "A professional tone must be maintained in all communications."
+  },
+  {
+    "level": "C2",
+    "category": ["logic", "discussion"],
+    "phrase": "L’argomentazione deve essere costruita su basi logiche solide.",
+    "translation": "The argument must be built on solid logical foundations."
+  },
+  {
+    "level": "C2",
+    "category": ["academic"],
+    "phrase": "La metodologia utilizzata è stata oggetto di critica accademica.",
+    "translation": "The methodology used has been subject to academic criticism."
+  },
+  {
+    "level": "C2",
+    "category": ["philosophy"],
+    "phrase": "L’etica kantiana si basa sul principio dell’imperativo categorico.",
+    "translation": "Kantian ethics is based on the principle of the categorical imperative."
+  },
+  {
+    "level": "C2",
+    "category": ["economy"],
+    "phrase": "Il sistema fiscale richiede una riforma strutturale.",
+    "translation": "The tax system requires structural reform."
+  },
+  {
+    "level": "C2",
+    "category": ["society"],
+    "phrase": "La coesione sociale è un obiettivo a lungo termine.",
+    "translation": "Social cohesion is a long-term goal."
+  },
+  {
+    "level": "C2",
+    "category": ["news"],
+    "phrase": "Il telegiornale ha trasmesso un’analisi dettagliata della crisi politica.",
+    "translation": "The news broadcast provided a detailed analysis of the political crisis."
+  },
+  {
+    "level": "C2",
+    "category": ["language"],
+    "phrase": "L’uso del congiuntivo è essenziale per esprimere incertezza.",
+    "translation": "The use of the subjunctive is essential to express uncertainty."
+  }
+]

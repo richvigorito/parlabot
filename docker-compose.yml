@@ -11,6 +11,19 @@ services:
     volumes:
       - stt-shared:/app/shared
 
+  audio-preprocessing-service:
+    build:
+      context: ./src/audio-preprocessing
+      dockerfile: Dockerfile
+    ports:
+      - "5003:5003"
+    volumes:
+      - stt-shared:/app/shared
+      - ./src/audio-preprocessing:/app
+    environment:
+      - PYTHONPATH=/app
+    command: uvicorn main:app --host 0.0.0.0 --port 5003 --reload
+
   stt-service:
     build:
       context: ./src/stt-service
@@ -42,8 +55,11 @@ services:
     environment:
       - MONGO_URL=mongodb://mongo:27017 
       - PYTHONPATH=/app
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
     volumes:
       - ./src/phrase-service:/app
+      - ./keys/parlabot-adcf69150750.json:/app/credentials.json:ro
+      - stt-shared:/app/shared
     command: uvicorn app:app --host 0.0.0.0 --port 5002 --reload
 
   frontend-ui:

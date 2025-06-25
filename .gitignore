@@ -14,10 +14,15 @@
 *.stackdump
 *.swp
 *.swo
+*.swm
+*.swn
 *.DS_Store
 *.env
 *.bak
 *~
+
+# app specific keys
+keys/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

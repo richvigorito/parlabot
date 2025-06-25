@@ -1,11 +1,17 @@
 {
-  "title": "ParlaBot: Speak Italian ☕",
-  "startRecording": "Speak to me",
+  "title": "ParlaBot: An Italian Language Pronunciation Coach ☕",
+  "using": "Using",
+  "chooseDifferentSpeaker": "Click ▶️ to sample other speakers and ✅ to change to that speaker",
+  "startRecording": "Repeat Target Phrase",
   "stopRecording": "Stop and Analyze",
   "processing": "Processing...",
   "expected": "Expected",
-  "youSaid": "You said",
+  "youSaid": "You Said",
   "feedback": "Feedback",
-  "getPhrase": "Get Phrase",
-  "trySaying": "Try Saying"
+  "getPhrase": "Get Random Phrase",
+  "selectLevel": "Select Level",
+  "showTranslations": "Show Translations",
+  "hideTranslations": "Hide Translations",
+  "trySaying": "Try Saying",
+  "pipelines": "Preprocessing Pipelines"
 }

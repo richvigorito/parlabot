@@ -1,5 +1,11 @@
 fastapi
 uvicorn[standard]
+python-multipart
 pymongo
 motor
+torch==2.5.0
 asgi-correlation-id
+pydantic
+TTS==0.22.0
+transformers==4.37.2
+google-cloud-texttospeech

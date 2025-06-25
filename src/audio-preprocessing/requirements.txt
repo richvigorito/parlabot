@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+transformers
+torch
+torchaudio
+soundfile
+python-multipart
+asgi-correlation-id
