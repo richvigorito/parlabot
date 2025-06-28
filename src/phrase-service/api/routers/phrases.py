@@ -49,12 +49,13 @@ async def upload_audio_for_source(
     file: UploadFile = File(...)
 ):
     try:
-        audio_url = await phrase_service.upload_audio_to_source(phrase_id, source_name, speaker, file)
+        filename = await phrase_service.upload_audio_to_source(phrase_id, source_name, speaker, file)
     except phrase_service.NotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e))
-    return {"audio_url": audio_url}
+    return {"filename": filename}
 
-@router.get("/phrases", response_model=List[PhraseResponse])
+# @router.get("/phrases", response_model=List[PhraseResponse])
+@router.get("/phrases")
 async def get_phrases(
     query: dict = Depends(get_phrase_filters),
     pagination: PaginationParams = Depends(get_pagination_params)
@@ -62,7 +63,8 @@ async def get_phrases(
     phrases = await phrase_service.get_phrases(query, pagination.offset, pagination.limit)
     if not phrases:
         return JSONResponse(content={"error": "no phrases found"}, status_code=404)
-    return phrases
+    # return JSONResponse(content=phrases.dict(), status_code=200) 
+    return JSONResponse(content=[p.dict() for p in phrases])
 
 @router.get("/phrases/random", response_model=PhraseResponse)
 async def get_random_phrase(query: dict = Depends(get_phrase_filters)):

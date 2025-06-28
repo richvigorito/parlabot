@@ -231,7 +231,8 @@ function App() {
                 <button
                   className="icon-button"
                   onClick={() => {
-                    const audio = new Audio(`http://localhost:5002${source.audio_url}`);
+                    //const audio = new Audio(`http://localhost:5002${source.audio_url}`);
+                    const audio = new Audio(source.audio_url);
                     audio.play();
                   }}
                 >
@@ -260,7 +261,7 @@ function App() {
                   {targetPhrase.sources?.map(audio => (
                       audio.source_name === selectedProvider && audio.speaker === selectedSpeaker && (
                     <audio key={audio.audio_url} controls>
-                      <source src={`http://localhost:5002${audio.audio_url}`} type="audio/mpeg" />
+                      <source src={audio.audio_url} type="audio/mpeg" />
                       Your browser does not support the audio element.
                     </audio>
                   )

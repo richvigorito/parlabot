@@ -9,3 +9,4 @@ pydantic
 TTS==0.22.0
 transformers==4.37.2
 google-cloud-texttospeech
+google-cloud-storage
