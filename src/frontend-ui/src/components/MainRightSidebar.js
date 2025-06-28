@@ -47,7 +47,7 @@ function RightSidebar({ selectedLevel, onLevelChange, phrases, selectedProvider,
       {phrase.sources?.map(src => (
         src.source_name === selectedProvider && src.speaker === selectedSpeaker && (
           <audio key={src.audio_url} controls>
-            <source src={`http://localhost:5002${src.audio_url}`} type="audio/mpeg" />
+            <source src={src.audio_url} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         )

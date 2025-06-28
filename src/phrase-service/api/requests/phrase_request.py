@@ -4,7 +4,7 @@ from bson import ObjectId
 
 class PhraseSourceEntry(BaseModel):
     source_id: str  
-    audio_url: str  
+    filename: str  
 
 class PhraseInput(BaseModel):
     text: str

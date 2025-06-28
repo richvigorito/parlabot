@@ -33,7 +33,7 @@ async def create_phrase_with_selected_tts(
             audio_sources.append({
                 "source_name": provider_name,
                 "speaker": speaker,
-                "audio_url": f"/audio/{filename}"
+                "filename": filename
             })
 
     return await save_phrase_doc(phrase_input, audio_sources)
@@ -59,7 +59,7 @@ async def create_phrase(phrase_input: PhraseInput) -> PhraseResponse:
         "sources": [{
             "source_name": phrase_input.first_source_name,
             "speaker": phrase_input.first_speaker,
-            "audio_url": f"/audio/{filename}"
+            "filename": filename
         }]
     }
 
@@ -115,7 +115,7 @@ async def upload_audio_to_source(phrase_id: str, source_name: str, speaker: Opti
             with open(filepath, "wb") as f:
                 f.write(contents)
 
-            src["audio_url"] = f"/audio/{filename}"
+            src["filename"] = filename
             break
 
     if not source_found:
@@ -123,7 +123,7 @@ async def upload_audio_to_source(phrase_id: str, source_name: str, speaker: Opti
 
     await collection.update_one({"_id": oid}, {"$set": {"sources": sources}})
 
-    return src["audio_url"]
+    return src["filename"]
 
 async def get_phrases(query: dict, offset: int, limit: int):
     docs = await (
