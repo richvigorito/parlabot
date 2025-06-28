@@ -10,6 +10,15 @@ services:
       - stt-service
     volumes:
       - stt-shared:/app/shared
+      - ./keys/orchestrator-key.json:/app/key.json
+    environment:
+      - PREPROCESS_URL=http://audio-preprocessing-service:5003
+      - STT_URL=http://stt-service:5001
+      - PUBLIC_URL=http://localhost:8000
+      # - STORAGE_DRIVER=gcs # Uncomment if using GCS
+      - GCS_BUCKET=parlabot-audio
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/key.json
+
 
   audio-preprocessing-service:
     build:

@@ -14,6 +14,8 @@
 *.stackdump
 *.swp
 *.swo
+*.swi
+*.swt
 *.swm
 *.swn
 *.DS_Store
@@ -23,6 +25,7 @@
 
 # app specific keys
 keys/
+shared-export/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
