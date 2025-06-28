@@ -231,7 +231,6 @@ function App() {
                 <button
                   className="icon-button"
                   onClick={() => {
-                    //const audio = new Audio(`http://localhost:5002${source.audio_url}`);
                     const audio = new Audio(source.audio_url);
                     audio.play();
                   }}

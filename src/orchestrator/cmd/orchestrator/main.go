@@ -2,7 +2,6 @@ package main
 
 import (
     "log"
-    //"orchestrator/internal/http/api"
     "orchestrator/internal/services"
     "orchestrator/internal/http/handlers"
     "orchestrator/internal/clients"
@@ -50,9 +49,7 @@ func main() {
 
     // Initialize services, clients and handlers
     preprocessingClient := clients.NewPreprocessingClient(preprocessURL)
-	//preprocessingClient := clients.NewPreprocessingClient("http://audio-preprocessing-service:5003")
     sttClient := clients.NewSTTClient(sttURL)
-	//sttClient := clients.NewSTTClient("http://stt-service:5001")
 	transcriptionService := services.NewTranscriptionService(preprocessingClient, sttClient)
     transcribeHandler := handlers.NewTranscribeHandler(transcriptionService)
 
@@ -71,8 +68,6 @@ func main() {
     }))
 
 
-    // api.RegisterRoutes(r)
-    // r.Static("/files", "/app/shared")
     r.GET("/files/*filename", storage.HTTPHandler())
 
     apiGroup := r.Group("/api")
