@@ -37,7 +37,7 @@ Nearly two decades later, I’ve been studying Italian seriously for three years
 
 ParlaBot is composed of several Dockerized microservices:
 
-1. [Frontend UI](/src/front-ui) in React
+1. [Frontend UI](/src/frontend-ui) in React
    - Displays the target phrase from the PhraseService  
    - Records mic input and sends audio to the Orchestrator  
    - Displays multiple transcriptions and feedback  
@@ -56,14 +56,14 @@ ParlaBot is composed of several Dockerized microservices:
    - Runs audio through specified preprocessing pipelines
    - (Planned) Consume/integrate compoiled C++ shared objects filter chains for audio preprocessing from registry
 
-3. [STT Service](/src/stt-service) in Python/FastAPI + HuggingFace Language Model Transcribers
+4. [STT Service](/src/stt-service) in Python/FastAPI + HuggingFace Language Model Transcribers
    - Accepts filtered `.wav` audio  
    - Transcribes speech using language model, currently only supports `wav2vec2-large-xlsr-53-italian` 
    - Scores the transcription against the target phrase
    - Returns the model, preprocessing info, and transcript  
    - (Planned) Add support for multiple models  
 
-4. [Phrase Service](/src/phrase-service) in Python/FastAPI + MongoDB + coqui (with mozilla and personal speaker training files)  + Google TTS API
+5. [Phrase Service](/src/phrase-service) in Python/FastAPI + MongoDB + coqui (with mozilla and personal speaker training files)  + Google TTS API
    - Accepts text phrases and TTS speaker and generates audio using TTS
    - (Planned) Tracks user progress  
 
