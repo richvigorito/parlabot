@@ -37,12 +37,12 @@ Nearly two decades later, I’ve been studying Italian seriously for three years
 
 ParlaBot is composed of several Dockerized microservices:
 
-1. **Frontend UI [React]**  
+1. [Frontend UI](/src/front-ui) in React
    - Displays the target phrase from the PhraseService  
    - Records mic input and sends audio to the Orchestrator  
    - Displays multiple transcriptions and feedback  
 
-2. [API Orchestrator](src/orchestator) in Go/Gin
+2. [API Orchestrator](/src/orchestrator) in Go/Gin
    - Fetches all target phrases from the Phrase Service
    - Fetches all pipelines from the Audio Preprocessing Service
    - Exposes a `/transcribe` endpoint  
@@ -51,19 +51,19 @@ ParlaBot is composed of several Dockerized microservices:
      - Forwards the filtered audio to the STT Service for transcription and scoring
    - (Planned) Routes results to the Feedback service  
 
-3. **Audio Preprocessing Service [Python (FastAPI) + Torch Transformers + C++ Filters]**  
+3. [Audio Preprocessing Service](/src/audio-preprocessing) in Python/FastAPI + Torch Transformers 
    - Accepts `.wav` audio  
    - Runs audio through specified preprocessing pipelines
    - (Planned) Consume/integrate compoiled C++ shared objects filter chains for audio preprocessing from registry
 
-3. **STT Service [Python (FastAPI) + HuggingFace Transformers]**  
+3. [STT Service](/src/stt-service) in Python/FastAPI + HuggingFace Language Model Transcribers
    - Accepts filtered `.wav` audio  
    - Transcribes speech using language model, currently only supports `wav2vec2-large-xlsr-53-italian` 
    - Scores the transcription against the target phrase
    - Returns the model, preprocessing info, and transcript  
    - (Planned) Add support for multiple models  
 
-4. **Phrase Service [Python (FastAPI) + MongoDB + coqui (with mozilla and personal speaker training files)  + Google TTS]**  
+4. [Phrase Service](/src/phrase-service) in Python/FastAPI + MongoDB + coqui (with mozilla and personal speaker training files)  + Google TTS API
    - Accepts text phrases and TTS speaker and generates audio using TTS
    - (Planned) Tracks user progress  
 
