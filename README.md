@@ -42,7 +42,7 @@ ParlaBot is composed of several Dockerized microservices:
    - Records mic input and sends audio to the Orchestrator  
    - Displays multiple transcriptions and feedback  
 
-2. API [Orchestrator](/src/orchestator) [Go (Gin)]**  
+2. [API Orchestrator](src/orchestator) in Go/Gin
    - Fetches all target phrases from the Phrase Service
    - Fetches all pipelines from the Audio Preprocessing Service
    - Exposes a `/transcribe` endpoint  
