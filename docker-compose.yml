@@ -5,7 +5,7 @@ services:
     build:
       context: ./src/orchestrator
     ports:
-      - "8000:8000"
+      - "8000:8080"
     depends_on:
       - stt-service
     volumes:
@@ -14,8 +14,9 @@ services:
     environment:
       - PREPROCESS_URL=http://audio-preprocessing-service:5003
       - STT_URL=http://stt-service:5001
-      - PUBLIC_URL=http://localhost:8000
-      # - STORAGE_DRIVER=gcs # Uncomment if using GCS
+      - PUBLIC_URL=http://localhost:8080
+      - PORT=8080
+      - STORAGE_DRIVER=gcs # Uncomment if using GCS
       - GCS_BUCKET=parlabot-audio
       - GOOGLE_APPLICATION_CREDENTIALS=/app/key.json
 
@@ -31,6 +32,7 @@ services:
       - ./src/audio-preprocessing:/app
     environment:
       - PYTHONPATH=/app
+      - PORT=5003
     command: uvicorn main:app --host 0.0.0.0 --port 5003 --reload
 
   stt-service:
@@ -38,13 +40,13 @@ services:
       context: ./src/stt-service
       dockerfile: Dockerfile
     ports:
-      - "5001:5001"
+      - "5001:8080"
     volumes:
       - stt-shared:/app/shared
       - ./src/stt-service:/app
     environment:
       - PYTHONPATH=/app
-    command: uvicorn main:app --host 0.0.0.0 --port 5001 --reload
+    command: uvicorn main:app --host 0.0.0.0 --port 8080 --reload
 
   mongo:
     image: mongo:7
@@ -58,18 +60,22 @@ services:
       context: ./src/phrase-service
       dockerfile: Dockerfile
     ports:
-      - "5002:5002"
+      - "5002:8080"
     depends_on:
       - mongo
     environment:
-      - MONGO_URL=mongodb://mongo:27017 
+      #- MONGO_URL=mongodb://mongo:27017 
+      - MONGO_URL=mongodb+srv://vigoritor:JK2BBav8mrCYR6Sv@parlabot.d26kadg.mongodb.net/
       - PYTHONPATH=/app
       - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+        #- PORT=5002
+      - PORT=8080
     volumes:
       - ./src/phrase-service:/app
       - ./keys/parlabot-adcf69150750.json:/app/credentials.json:ro
       - stt-shared:/app/shared
-    command: uvicorn app:app --host 0.0.0.0 --port 5002 --reload
+    command: uvicorn app:app --host 0.0.0.0 --port 8080
+    # command: uvicorn app:app --host 0.0.0.0 --port 5002 --reload
 
   frontend-ui:
     image: node:18-alpine

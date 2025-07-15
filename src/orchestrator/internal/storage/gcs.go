@@ -25,9 +25,11 @@ func (g *GCSStorage) SaveFile(filename string, data []byte) (string, error) {
 }
 
 func (g *GCSStorage) GetFile(path string) ([]byte, error) {
+    fmt.Printf("GCS Fetching File: %s. Bucket: %s\n", path, g.BucketName)
     ctx := context.Background()
     reader, err := g.Client.Bucket(g.BucketName).Object(path).NewReader(ctx)
     if err != nil {
+        fmt.Printf("Error fetching file %s from GCS: %v\n", path, err)
         return nil, err
     }
     defer reader.Close()

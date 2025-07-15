@@ -6,3 +6,4 @@ torchaudio
 soundfile
 python-multipart
 asgi-correlation-id
+google-cloud-storage

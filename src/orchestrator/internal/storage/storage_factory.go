@@ -5,6 +5,7 @@ import (
     "os"
     "fmt"
     "cloud.google.com/go/storage"
+    "google.golang.org/api/option"
 )
 
 func Make() (Storage, error) {
@@ -12,7 +13,9 @@ func Make() (Storage, error) {
     switch driver {
         case "gcs":
             fmt.Println("Using GCS Storage Driver")
-            client, err := storage.NewClient(context.Background())
+            //client, err := storage.NewClient(context.Background())
+            client, err := createGCSClient(context.Background()) 
+
             if err != nil {
                 fmt.Println("Error creating GCS client:", err)
                 return nil, err
@@ -42,3 +45,20 @@ func Make() (Storage, error) {
     }
 }
 
+func createGCSClient(ctx context.Context) (*storage.Client, error) {
+    credPath := os.Getenv("GOOGLE_APPLICATION_CREDENTIALS")
+    if credPath != "" {
+        fmt.Println("Using explicit credentials file from GOOGLE_APPLICATION_CREDENTIALS:", credPath)
+
+        // Check that the file actually exists to avoid cryptic errors
+        if _, err := os.Stat(credPath); os.IsNotExist(err) {
+            fmt.Println("Credential file does not exist at path:", credPath)
+            return nil, err
+        }
+
+        return storage.NewClient(ctx, option.WithCredentialsFile(credPath))
+    }
+
+    fmt.Println("Using Application Default Credentials (ADC)")
+    return storage.NewClient(ctx)
+}

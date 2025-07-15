@@ -24,6 +24,6 @@ COPY --from=builder /app/orchestrator .
 # Debug: check if the binary is present and permissions
 RUN ls -lh /app
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["./orchestrator"]

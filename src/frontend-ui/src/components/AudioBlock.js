@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Waveform from './Waveform'; // The waveform component using wavesurfer.js
+import { API_ORCHESTRATOR_URL } from '../config';
 
 function AudioBlock({ block }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => setIsVisible(prev => !prev);
+
+  const makeUrl = (path) => new URL(path, API_ORCHESTRATOR_URL).toString();
+
 
   return (
     <div className="audio-block-container">
@@ -29,20 +33,20 @@ function AudioBlock({ block }) {
           
           <div className="audio-section">
             <strong>Input File:</strong>
-            <Waveform audioUrl={`http://localhost:8000${block.input_file}`} />
+            <Waveform audioUrl={makeUrl(block.input_file)} />
           </div>
           <div className="audio-section">
             <strong>Filters:</strong>
             {block.transformations.map((filter, i) => (
               <div key={i} className="filter-block">
                 <div>{filter.filter_name}</div>
-                <Waveform audioUrl={`http://localhost:8000${filter.output_file}`} />
+                <Waveform audioUrl={makeUrl(filter.output_file)} />
               </div>
             ))}
           </div>
           <div className="audio-section">
             <strong>Output File:</strong>
-            <Waveform audioUrl={`http://localhost:8000${block.output_file}`} />
+            <Waveform audioUrl={makeUrl(block.output_file)} />
           </div>
         </div>
       )}

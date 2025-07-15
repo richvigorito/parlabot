@@ -3,7 +3,7 @@ package services
 import (
 	"fmt"
 	"io"
-	"os"
+	//"os"
 	"mime/multipart"
 	"strings"
 	//"net/http"
@@ -12,17 +12,20 @@ import (
 	"orchestrator/internal/clients"
  	"orchestrator/internal/http/resources"
 	"orchestrator/internal/http/requests"
+    "orchestrator/internal/storage"
 )
 
 type TranscriptionService struct {
 	preprocessingClient *clients.PreprocessingClient
 	sttClient           *clients.STTClient
+	storage           	storage.Storage
 }
 
-func NewTranscriptionService(preprocessingClient *clients.PreprocessingClient, sttClient *clients.STTClient) *TranscriptionService {
+func NewTranscriptionService(preprocessingClient *clients.PreprocessingClient, sttClient *clients.STTClient, storage storage.Storage) *TranscriptionService {
 	return &TranscriptionService{
 		preprocessingClient: preprocessingClient,
 		sttClient:           sttClient,
+		storage:           	 storage,
 	}
 }
 
@@ -86,18 +89,27 @@ func (s *TranscriptionService) processSinglePipeline(pipeline, filename string, 
 	//processedContent, err := io.ReadAll(resp.Body)
 	// replace 'files' with emtpy
 	//processedPath := "/app/shared" +  
-	processedPath := "/app/shared" + strings.Replace(preprocessResponse.OutputFile, "/files", "", 1)  
-	fmt.Printf("Processed file path: %s\n", processedPath)
-	processedContent, err := os.ReadFile(processedPath)
+
+
+	//processedPath := "/app/shared" + strings.Replace(preprocessResponse.OutputFile, "/files", "", 1)  
+	//fmt.Printf("Processed file path: %s\n", processedPath)
+	//processedContent, err := os.ReadFile(processedPath)
+
+	objectPath := strings.TrimPrefix(preprocessResponse.OutputFile, "/files/")
+	processedContent, err := s.storage.GetFile(objectPath)
 	if err != nil {
+		fmt.Printf("Failed to read processed file for pipeline %s: %v\n", pipeline, err)
 		return PipelineResult{Pipeline: pipeline, Error: fmt.Sprintf("read error: %v", err)}
 	}
+	fmt.Printf("Processed content length: %d bytes\n", len(processedContent))
 
 	// transcription, confidence, err := s.sttClient.TranscribeFile(processedContent, filename)
 	transcriptionResponse, err := s.sttClient.TranscribeFile(filename, processedContent)
 	if err != nil {
+		fmt.Printf("Transcription failed for pipeline %s: %v\n", pipeline, err)
 		return PipelineResult{Pipeline: pipeline, Error: fmt.Sprintf("STT failed: %v", err)}
 	}
+	fmt.Printf("Transcription for pipeline %s: %s (confidence: %.2f)\n", pipeline, transcriptionResponse.Transcription, transcriptionResponse.Confidence)
 
 	return PipelineResult{
 		Pipeline: pipeline,

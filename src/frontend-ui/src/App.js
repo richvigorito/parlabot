@@ -5,6 +5,9 @@ import AudioBlock from './components/AudioBlock';
 import Banner from './components/Banner';
 import RightSidebar from './components/MainRightSidebar';
 import LeftSidebar from './components/MainLeftSidebar';
+import Joyride from 'react-joyride';
+import { API_ORCHESTRATOR_URL, PHRASE_SERVICE_URL, AUDIO_PREPROCESSING_URL } from './config';
+
 
 import en from './locales/en.json';
 import it from './locales/it.json';
@@ -13,6 +16,11 @@ const recorder = new MicRecorder({ bitRate: 128 });
 const locales = { en, it };
 
 function App() {
+  console.log("App started");
+  console.log("API_ORCHESTRATOR_URL", API_ORCHESTRATOR_URL);
+  console.log("API_PHRASE_SERVICE_URL", PHRASE_SERVICE_URL);
+  console.log("API_AUDIO_PREPROCESSING_URL", AUDIO_PREPROCESSING_URL);
+
   const [isRecording, setIsRecording] = useState(false);
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -33,8 +41,43 @@ function App() {
   const [lang, setLang] = useState('it');
   const t = locales[lang];
 
+  const steps = [
+{
+      target: '.row-header',
+      content: 't.startTour',
+    },
+    {
+      target: '.lang-switcher',
+      content: 't.languageSwitcher',
+    },
+    {
+      target: '.translation-toggle',
+      content: 't.translationToggle',
+    },
+    {
+      target: '.hide-translations-button',
+      content: 't.hideTranslations',
+    },
+    {
+      target: '.speaker-preview',
+      content: 't.speakerPreview',
+    },
+    {
+      target: '.random-phrase-block',
+      content: 't.selectPhrase',
+    },
+    {
+      target: '.audio-section',
+      content: 't.speak',
+    },
+    {
+      target: '.pipelines-container',
+      content: 't.results',
+    },
+  ];
+
   const fetchPhrasesForLevel = async (level) => {
-    const res = await fetch(`http://localhost:5002/phrases?level=${level}`);
+    const res = await fetch(`${PHRASE_SERVICE_URL}/phrases?level=${level}`);
     const data = await res.json();
     setLevel(level); 
     setPhrases(data); 
@@ -42,7 +85,7 @@ function App() {
 
   const fetchPipelines = async () => {
     if(pipelines.length == 0) {
-      const res = await fetch(`http://localhost:5003/pipelines`);
+      const res = await fetch(`${AUDIO_PREPROCESSING_URL}/pipelines`);
       const data = await res.json();
       setPipelines(data); 
       setSelectedPipelines(data); 
@@ -54,10 +97,10 @@ function App() {
       alert("Please select a provider and speaker first.");
       return;
     }
-
-    var url = "http://localhost:5002/phrases/random";
+  
+    var url = `${PHRASE_SERVICE_URL}/phrases/random`;
     if(selectedLevel){
-      url = "http://localhost:5002/phrases/random?level="+selectedLevel;
+      url = PHRASE_SERVICE_URL+"/phrases/random?level="+selectedLevel;
     }
     const res = await fetch(url);
     const phrase = await res.json();
@@ -66,7 +109,7 @@ function App() {
    };
 
   const fetchSamplePhrase = async () => {
-    const res = await fetch("http://localhost:5002/phrases?text=ciao&level=A1&limit=1");
+    const res = await fetch(`${PHRASE_SERVICE_URL}/phrases?text=ciao&level=A1&limit=1`);
     const data = await res.json();
 
     const first = data[0]?.sources?.[0];
@@ -133,7 +176,7 @@ function App() {
 
 
     try {
-      const res = await fetch("http://localhost:8000/api/transcribe", {
+      const res = await fetch(`${API_ORCHESTRATOR_URL}/api/transcribe`, {
         method: "POST",
         body: formData,
       });
@@ -196,6 +239,7 @@ function App() {
 
   return (
     <>
+    <Joyride steps={steps} />
     <Banner />
     <div className="app-container">
       <LeftSidebar />

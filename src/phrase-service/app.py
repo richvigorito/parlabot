@@ -2,6 +2,7 @@ import logging
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from db.mongo import collection
 
 from config import settings
 from logging_config import setup_logging
@@ -14,13 +15,13 @@ setup_logging()
 logger = logging.getLogger("phrase-service")
 
 
-print("... Application startup beginning. init_tts underway")
+logger.info("... Application startup beginning. init_tts underway")
 try:
     CoquiTTSProvider.get_instance()
-    print("✅ init_tts complete")
+    logger.info("✅ init_tts complete")
 except Exception as e:
-    print(f"❌ init_tts failed: {e}")
-print("🚀 Application startup complete — ready to serve requests!")
+    logger.info(f"❌ init_tts failed: {e}")
+logger.info("🚀 Application startup complete — ready to serve requests!")
 
 
 
@@ -40,6 +41,7 @@ app.mount("/audio", StaticFiles(directory=settings.AUDIO_DIR), name="audio")
 
 @app.get("/health")
 def health():
+    logger.info("Health endpoint called")
     return {"ok": True}
 
 # Routers
