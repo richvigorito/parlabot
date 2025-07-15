@@ -1,0 +1,12 @@
+# src/frontend-ui/.gcloudignore
+
+node_modules
+.svelte-kit
+.vite
+dist
+build
+.env
+.DS_Store
+*.log
+coverage
+

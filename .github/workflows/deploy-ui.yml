@@ -30,7 +30,8 @@ jobs:
 
     - name: Build and push container image
       run: |
-        gcloud builds submit --tag us-central1-docker.pkg.dev/parlabot/parlabot-services/frontend-ui
+        gcloud builds submit src/frontend-ui --tag us-central1-docker.pkg.dev/parlabot/parlabot-services/frontend-ui
+      
 
     - name: Terraform init
       working-directory: infrastructure/ui
