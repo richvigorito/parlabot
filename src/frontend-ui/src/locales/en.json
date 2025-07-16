@@ -13,5 +13,15 @@
   "showTranslations": "Show Translations",
   "hideTranslations": "Hide Translations",
   "trySaying": "Try Saying",
-  "pipelines": "Preprocessing Pipelines"
+  "pipelines": "Preprocessing Pipelines",
+  "joyride": {
+    "startTour": "👋 Welcome to <b>ParlaBot</b>! This is a pronunciation coach for Italian language learners. It helps you practice speaking by providing real-time feedback on your pronunciation. Follow the steps below to get started. 🎯",
+    "languageToggle": "🌐 You can switch between English and Italian at any time using the <b>language toggle</b> button.",
+    "languageLevel": "📘 Select your <b>CEFR language level</b> to receive phrases tailored to your proficiency. Click the <b>Select Level</b> button to choose. ParlaBot uses a customizable Text-to-Speech (TTS) engine with two supported methods: <a href='https://pypi.org/project/coqui-tts/' target='_blank' rel='noopener noreferrer'>Python Coqui TTS</a> and <a href='https://cloud.google.com/text-to-speech?hl=en' target='_blank' rel='noopener noreferrer'>Google TTS</a>.",
+    "hideTranslations": "🙈 Click <b>Hide Translations</b> to challenge yourself without relying on English hints.",
+    "speakerSelection": "🗣️ Choose a <b>speaker voice</b> to practice with. TTS is powered by either Google or Coqui (Torch-based). For Coqui, ParlaBot offers 3 speaker profiles: 2 from <a href='https://commonvoice.mozilla.org/en/datasets' target='_blank' rel='noopener noreferrer'>Mozilla’s Common Voice</a> and 1 custom-trained on my own voice. Click ▶️ to preview or ✅ to select a voice.",
+    "selectPhrase": "🎲 Click <b>Get Random Phrase</b> to practice a new sentence at your selected level. You can also click 🔁 to manually pick one. Then press <b>Repeat Target Phrase</b> to record, and <b>Stop and Analyze</b> to receive feedback.",
+    "results": "🧪 Apply one or more <b>preprocessing pipelines</b> to your audio recording. Pipelines run in the selected order and modify how your pronunciation is analyzed. Results appear in the <b>Feedback</b> section and show the expected phrase, what you said, and differences. Waveforms for both are also displayed.",
+    "endTour": "🎉 That’s it! <b>ParlaBot</b> is a passion project to dive deeper into machine learning, speech processing, and tools like Go, Python, MongoDB, Terraform, GitHub Actions, and GCP. I built this to revisit my university work in natural language processing. If you enjoy it or have suggestions, reach out via GitHub or LinkedIn. Thanks for using ParlaBot! <br/><em><b>Ciao! Ciao!</b></em><br/> 🇮🇹"
+  } 
 }

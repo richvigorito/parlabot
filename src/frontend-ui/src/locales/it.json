@@ -13,5 +13,15 @@
   "showTranslations": "Mostra i Traducioni",
   "hideTranslations": "Nascodi i Traducioni",
   "trySaying": "Provi a dire",
-  "pipelines": "Pipeline di Pre-Elaborazione"
+  "pipelines": "Pipeline di Pre-Elaborazione",
+  "joyride": {
+    "startTour": "👋 Benvenuto in <b>ParlaBot</b>! Questo è un coach di pronuncia per chi studia l'italiano. Ti aiuta a esercitarti nel parlare fornendo feedback in tempo reale sulla tua pronuncia. Segui i passaggi qui sotto per iniziare. 🎯",
+    "languageToggle": "🌐 Puoi passare da inglese a italiano in qualsiasi momento usando il pulsante <b>cambio lingua</b>.",
+    "languageLevel": "📘 Seleziona il tuo <b>livello CEFR</b> per ricevere frasi adatte alla tua competenza. Clicca su <b>Seleziona Livello</b> per scegliere. ParlaBot usa un motore TTS personalizzabile con due metodi supportati: <a href='https://pypi.org/project/coqui-tts/' target='_blank' rel='noopener noreferrer'>Python Coqui TTS</a> e <a href='https://cloud.google.com/text-to-speech?hl=it' target='_blank' rel='noopener noreferrer'>Google TTS</a>.",
+    "hideTranslations": "🙈 Clicca su <b>Nascondi Traduzioni</b> per esercitarti senza suggerimenti in inglese.",
+    "speakerSelection": "🗣️ Scegli una <b>voce sintetica</b> per esercitarti. Il TTS è fornito da Google o Coqui (basato su Torch). Per Coqui, ParlaBot include 3 profili vocali: 2 da <a href='https://commonvoice.mozilla.org/it/datasets' target='_blank' rel='noopener noreferrer'>Mozilla Common Voice</a> e 1 addestrato con la mia voce personale. Premi ▶️ per ascoltare un’anteprima o ✅ per selezionare.",
+    "selectPhrase": "🎲 Clicca su <b>Frase Casuale</b> per esercitarti con una nuova frase al tuo livello. Puoi anche cliccare su 🔁 per sceglierne una manualmente. Poi premi <b>Ripeti Frase Obiettivo</b> per registrare e <b>Ferma e Analizza</b> per ricevere feedback.",
+    "results": "🧪 Applica uno o più <b>pipeline di pre-elaborazione</b> alla tua registrazione. Le pipeline vengono eseguite nell’ordine scelto e influenzano l’analisi della pronuncia. I risultati compaiono nella sezione <b>Feedback</b> e mostrano la frase attesa, ciò che hai detto e le differenze. Sono disponibili anche le forme d’onda audio.",
+    "endTour": "🎉 Il tour è finito! <b>ParlaBot</b> è un progetto personale nato per approfondire machine learning, elaborazione vocale, e strumenti come Go, Python, MongoDB, Terraform, GitHub Actions e GCP. L’ho creato per riprendere il mio lavoro universitario in elaborazione del linguaggio naturale. Se ti piace o hai suggerimenti, scrivimi su GitHub o LinkedIn. Grazie per aver usato ParlaBot! 🇮🇹"
+  } 
 }

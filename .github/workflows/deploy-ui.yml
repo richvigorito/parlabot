@@ -47,4 +47,3 @@ jobs:
     - name: Terraform apply
       working-directory: infrastructure/ui
       run: terraform apply -auto-approve
-
