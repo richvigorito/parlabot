@@ -6,6 +6,7 @@ import Banner from './components/Banner';
 import RightSidebar from './components/MainRightSidebar';
 import LeftSidebar from './components/MainLeftSidebar';
 import Joyride from 'react-joyride';
+import getSteps from './joyrideSteps';
 import { API_ORCHESTRATOR_URL, PHRASE_SERVICE_URL, AUDIO_PREPROCESSING_URL } from './config';
 
 
@@ -40,41 +41,8 @@ function App() {
 
   const [lang, setLang] = useState('it');
   const t = locales[lang];
-
-  const steps = [
-{
-      target: '.row-header',
-      content: 't.startTour',
-    },
-    {
-      target: '.lang-switcher',
-      content: 't.languageSwitcher',
-    },
-    {
-      target: '.translation-toggle',
-      content: 't.translationToggle',
-    },
-    {
-      target: '.hide-translations-button',
-      content: 't.hideTranslations',
-    },
-    {
-      target: '.speaker-preview',
-      content: 't.speakerPreview',
-    },
-    {
-      target: '.random-phrase-block',
-      content: 't.selectPhrase',
-    },
-    {
-      target: '.audio-section',
-      content: 't.speak',
-    },
-    {
-      target: '.pipelines-container',
-      content: 't.results',
-    },
-  ];
+  const steps = getSteps(t, setLang);
+  console.log("Steps for Joyride:", steps);
 
   const fetchPhrasesForLevel = async (level) => {
     const res = await fetch(`${PHRASE_SERVICE_URL}/phrases?level=${level}`);
@@ -239,7 +207,28 @@ function App() {
 
   return (
     <>
-    <Joyride steps={steps} />
+   <Joyride
+  steps={steps}
+  run={true}
+  continuous={true}
+  showSkipButton={true}
+  styles={{
+    options: {
+      zIndex: 10000,
+      overlayColor: 'rgba(0, 0, 0, 0.7)', // dimmed dark overlay behind
+      beaconSize: 40,     // make beacon dot bigger
+      beaconInnerSize: 20,
+      beaconOuterSize: 40,
+      primaryColor: '#ff0000', // bright red beacon
+      spotlightShadow: '0 0 15px 5px rgba(255,0,0,0.7)', // red glow around highlight
+    },
+    beacon: {
+      // Override beacon styles directly
+      // fontSize, padding, cursor, etc. if needed
+      cursor: 'pointer',
+    },
+  }}
+/> 
     <Banner />
     <div className="app-container">
       <LeftSidebar />
