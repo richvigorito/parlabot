@@ -32,6 +32,10 @@ jobs:
       with:
         terraform_version: 1.5.7
 
+    - name: Write .env.production to build context
+      run: |
+        echo "${{ secrets.UI_ENV_PROD }}" > src/frontend-ui/.env.production
+
     - name: Build and push container image
       run: |
         gcloud builds submit src/frontend-ui --tag us-central1-docker.pkg.dev/parlabot/parlabot-services/frontend-ui
