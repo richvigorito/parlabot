@@ -1,5 +1,10 @@
 name: Deploy UI
 
+env:
+  REACT_APP_API_ORCHESTRATOR_URL: ${{ secrets.REACT_APP_API_ORCHESTRATOR_URL }}
+  REACT_APP_PHRASE_SERVICE_URL: ${{ secrets.REACT_APP_PHRASE_SERVICE_URL }}
+  REACT_APP_AUDIO_PREPROCESSING_URL: ${{ secrets.REACT_APP_AUDIO_PREPROCESSING_URL }}
+
 on:
   push:
     branches:
@@ -34,7 +39,7 @@ jobs:
 
     - name: Write .env.production to build context
       run: |
-        echo "${{ secrets.GCP_SA_KEY }}" > src/frontend-ui/.env.production
+        echo "${{ secrets.ENV_VARS }}" > src/frontend-ui/.env.production
 
     - name: Debug .env.production contents
       run: |
