@@ -8,11 +8,9 @@ function Banner() {
       <div className="left">
         <div className="mode-selector">
           <span className="mode active">Parlabot</span> | 
-          <span className="mode">Vowel Recognizer</span>
         </div> 
       </div>
         •
-        <a href="#about">About</a>
         <a href="https://github.com/richvigorito/parlabot" target="_blank" rel="noopener noreferrer">
           <FaGithub className="icon" /> GitHub
         </a>
