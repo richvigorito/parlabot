@@ -36,9 +36,16 @@ jobs:
       run: |
         echo "${{ secrets.UI_ENV_PROD }}" > src/frontend-ui/.env.production
 
+    - name: Set Imaget Tag
+      run: |
+        echo "IMAGE_TAG=frontend-ui:latest:$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
     - name: Build and push container image
       run: |
-        gcloud builds submit src/frontend-ui --tag us-central1-docker.pkg.dev/parlabot/parlabot-services/frontend-ui:latest
+        IMAGE_PATH=us-central1-docker.pkg.dev/parlabot/parlabot-services/frontend-ui
+        DIGEST=$(gcloud builds submit src/frontend-ui --tag "$IMAGE_PATH:latest" --format='value(IMAGE_DIGEST)')
+        echo "digest=$DIGEST" >> $GITHUB_OUTPUT
+        echo "image=$IMAGE_PATH@$DIGEST" >> $GITHUB_ENV
 
     - name: Terraform init
       working-directory: infrastructure/ui
@@ -46,8 +53,10 @@ jobs:
 
     - name: Terraform plan
       working-directory: infrastructure/ui
-      run: terraform plan
+      run: terraform plan -var="image=${{ env.image }}"
 
     - name: Terraform apply
       working-directory: infrastructure/ui
-      run: terraform apply -auto-approve
+      run: terraform apply -auto-approve -var="image=${{ env.image }}"
+
+
