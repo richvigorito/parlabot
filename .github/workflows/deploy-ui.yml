@@ -34,7 +34,7 @@ jobs:
 
     - name: Write .env.production to build context
       run: |
-        echo "${{ secrets.UI_ENV_PROD }}" > src/frontend-ui/.env.production
+        echo "${{ secrets.GCP_SA_KEY }}" > src/frontend-ui/.env.production
 
     - name: Debug .env.production contents
       run: |
