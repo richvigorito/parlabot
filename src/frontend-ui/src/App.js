@@ -42,7 +42,6 @@ function App() {
   const [lang, setLang] = useState('it');
   const t = locales[lang];
   const steps = getSteps(t, setLang);
-  console.log("Steps for Joyride:", steps);
 
   const fetchPhrasesForLevel = async (level) => {
     const res = await fetch(`${PHRASE_SERVICE_URL}/phrases?level=${level}`);
@@ -215,20 +214,23 @@ function App() {
   styles={{
     options: {
       zIndex: 10000,
-      overlayColor: 'rgba(0, 0, 0, 0.7)', // dimmed dark overlay behind
-      beaconSize: 40,     // make beacon dot bigger
-      beaconInnerSize: 20,
-      beaconOuterSize: 40,
-      primaryColor: '#ff0000', // bright red beacon
-      spotlightShadow: '0 0 15px 5px rgba(255,0,0,0.7)', // red glow around highlight
+      overlayColor: 'rgba(0, 0, 0, 0.7)',
+
+      beaconSize: 100,        // MASSIVE beacon
+      beaconInnerSize: 50,
+      beaconOuterSize: 100,
+
+      primaryColor: '#ff0000',
+
+      spotlightShadow: '0 0 40px 15px rgba(255,0,0,1)',
     },
     beacon: {
-      // Override beacon styles directly
-      // fontSize, padding, cursor, etc. if needed
       cursor: 'pointer',
+      animation: 'pulse 1.5s infinite',
+      borderRadius: '50%',
     },
-  }}
-/> 
+  }} 
+  /> 
     <Banner />
     <div className="app-container">
       <LeftSidebar />
