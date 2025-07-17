@@ -12,4 +12,8 @@ To use Parlabot a user will do the following:
 6. Click 'repeat target phrase', speak, click 'stop' to stop recording.
 7. In the bottom panel results are returned, one for each preprocessing pipeline selected.
 
-# Build/Run
+## Build/Run
+### Dockerfile
+### docker-compose
+### terraform
+

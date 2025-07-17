@@ -64,8 +64,7 @@ jobs:
     - name: Debugggin image value
       run: |
         echo "Debug-Deploying image: $image"
-      env:
-        image: ${{ env.image }}
+        env | grep image
 
     - name: Terraform init
       working-directory: infrastructure/ui
@@ -73,18 +72,11 @@ jobs:
 
     - name: Confirm image var before Terraform
       run: echo "🛠 image = $image"
-      env:
-        image: ${{ env.image }}
-
 
     - name: Terraform plan
       working-directory: infrastructure/ui
       run: terraform plan -var="image=$image"
-      env:
-        image: ${{ env.image }}
 
     - name: Terraform apply
       working-directory: infrastructure/ui
       run: terraform apply -auto-approve -var="image=$image"
-      env:
-        image: ${{ env.image }}
