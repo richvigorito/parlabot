@@ -11,3 +11,5 @@ To use Parlabot a user will do the following:
 5. Optionally select/deselect which preprocessing pipelines to the input audio.
 6. Click 'repeat target phrase', speak, click 'stop' to stop recording.
 7. In the bottom panel results are returned, one for each preprocessing pipeline selected.
+
+# Build/Run
