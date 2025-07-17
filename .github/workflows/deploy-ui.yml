@@ -47,9 +47,9 @@ jobs:
         echo "digest=$DIGEST" >> $GITHUB_OUTPUT
         echo "image=$IMAGE_PATH@$DIGEST" >> $GITHUB_ENV
 
-    - name: Debug image value
+    - name: Debugggin image value
       run: |
-        echo "Deploying image: $image"
+        echo "Debug-Deploying image: $image"
       env:
         image: ${{ env.image }}
 
