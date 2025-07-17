@@ -47,6 +47,9 @@ jobs:
         echo "digest=$DIGEST" >> $GITHUB_OUTPUT
         echo "image=$IMAGE_PATH@$DIGEST" >> $GITHUB_ENV
 
+    - name: Debug image value
+      run: echo "Deploying image: ${{ env.image }}"
+
     - name: Terraform init
       working-directory: infrastructure/ui
       run: terraform init
@@ -54,9 +57,6 @@ jobs:
     - name: Terraform plan
       working-directory: infrastructure/ui
       run: terraform plan -var="image=${{ env.image }}"
-
-    - name: Debug image value
-      run: echo "Deploying image: ${{ env.image }}"
 
     - name: Terraform apply
       working-directory: infrastructure/ui
