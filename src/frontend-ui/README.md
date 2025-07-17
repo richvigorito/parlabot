@@ -16,3 +16,4 @@ To use Parlabot a user will do the following:
 ### Dockerfile
 ### docker-compose
 ### terraform
+### GCP
