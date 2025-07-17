@@ -43,9 +43,14 @@ jobs:
     - name: Build and push container image
       run: |
         IMAGE_PATH=us-central1-docker.pkg.dev/parlabot/parlabot-services/frontend-ui
-        DIGEST=$(gcloud builds submit src/frontend-ui --tag "$IMAGE_PATH:latest" --format='value(IMAGE_DIGEST)')
-        echo "digest=$DIGEST" >> $GITHUB_OUTPUT
-        echo "image=$IMAGE_PATH@$DIGEST" >> $GITHUB_ENV
+        DIGEST=$(gcloud builds submit src/frontend-ui \
+          --tag "$IMAGE_PATH:latest" \
+          --format='value(IMAGE_DIGEST)' \
+          --quiet)
+      echo "digest=$DIGEST" >> $GITHUB_OUTPUT
+      echo "image=$IMAGE_PATH@$DIGEST" >> $GITHUB_ENV
+      echo "Digest is: $DIGEST"
+      echo "Image path is: $IMAGE_PATH"
 
     - name: Debugggin image value
       run: |
