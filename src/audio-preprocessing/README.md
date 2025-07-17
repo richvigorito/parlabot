@@ -4,3 +4,6 @@ The audio preprocessing service performs audio file manipulation prior to sendin
 - [Band-pass filter](https://en.wikipedia.org/wiki/Band-pass_filter)
 - Wave amplification filter
 - Silence Trimming filters (both front and end of wave)
+
+## Tech
+This service is a rest api built using Python/FastApi. The filter transformations are performed using Torhc.
