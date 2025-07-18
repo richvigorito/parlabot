@@ -7,11 +7,14 @@ import RightSidebar from './components/MainRightSidebar';
 import LeftSidebar from './components/MainLeftSidebar';
 import Joyride from 'react-joyride';
 import getSteps from './joyrideSteps';
+import ReactGA from "react-ga4";
 import { API_ORCHESTRATOR_URL, PHRASE_SERVICE_URL, AUDIO_PREPROCESSING_URL } from './config';
 
 
 import en from './locales/en.json';
 import it from './locales/it.json';
+
+ReactGA.initialize("G-X4NJ2FYKVT");
 
 const recorder = new MicRecorder({ bitRate: 128 });
 const locales = { en, it };
