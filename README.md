@@ -1,6 +1,13 @@
 # ☕ ParlaBot: potrebbe ripeterlo?  
 <em>(SpeakBot: Could you repeat that?)</em>
 
+<div align="center">
+   <h2>
+      <b>🔗 Demo Link: https://parlabot.io 🔗 </b>
+   </h2>
+</div>
+
+
 ParlaBot is a voice-enabled app that gives you real-time feedback on your Italian pronunciation. Speak into your mic, and ParlaBot will transcribe what you said, compare it to a target phrase, and return constructive feedback — powered by modern open-source AI and traditional DSP filtering techniques.
 
 ---
